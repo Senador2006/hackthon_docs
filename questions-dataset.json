@@ -1,9 +1,59 @@
 {
   "metadata": {
-    "version": "1.0.0",
-    "last_updated": "2024-01-01",
-    "total_questions": 120,
-    "subjects": ["introducao", "credito", "investimentos", "financiamento"]
+    "version": "1.1.0",
+    "last_updated": "2025-11-19",
+    "total_questions": 42,
+    "subjects": ["introducao", "credito", "investimentos", "financiamento"],
+    "difficulty_levels": {
+      "iniciante": {
+        "xp_range": "10-12",
+        "description": "Introduz conceitos e vocabulário básico."
+      },
+      "basico": {
+        "xp_range": "12-18",
+        "description": "Exige aplicação prática simples do conteúdo."
+      },
+      "medio": {
+        "xp_range": "15-22",
+        "description": "Requer análise de cenários e comparação de alternativas."
+      },
+      "avancado": {
+        "xp_range": "20-25",
+        "description": "Demandam visão estratégica e tomada de decisão complexa."
+      }
+    },
+    "question_format": {
+      "common_fields": [
+        "id",
+        "type",
+        "session",
+        "phase",
+        "difficulty",
+        "context",
+        "question",
+        "explanation",
+        "xp_value"
+      ],
+      "objective_fields": [
+        "options",
+        "correct_answer"
+      ],
+      "discursive_fields": [
+        "keywords"
+      ],
+      "field_rules": {
+        "id": "String única incremental no formato q###.",
+        "type": "Valores aceitos: objetiva ou discursiva.",
+        "correct_answer": "Índice baseado em zero que referencia o array options.",
+        "keywords": "Lista de termos que orientam correção automática das discursivas."
+      }
+    },
+    "distribution_by_session": {
+      "introducao": 12,
+      "credito": 10,
+      "investimentos": 12,
+      "financiamento": 8
+    }
   },
   "questions": [
     {
@@ -515,6 +565,126 @@
       "explanation": "Quitação antecipada é pagar o financiamento antes do prazo. Benefícios: economiza juros, libera renda. Cuidados: verificar se há multa ou desconto, calcular se vale a pena (considerando investimentos alternativos), verificar impacto no score de crédito.",
       "xp_value": 22,
       "keywords": ["quitação", "juros", "multa", "desconto", "score"]
+    },
+    {
+      "id": "q035",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "orcamento_pessoal",
+      "difficulty": "basico",
+      "context": "Você está reorganizando o orçamento mensal e quer um método simples para começar.",
+      "question": "Como a regra 50-30-20 ajuda a distribuir seu orçamento?",
+      "options": [
+        "Define 50% para lazer, 30% para dívidas e 20% para necessidades básicas",
+        "Orienta 50% para necessidades essenciais, 30% para desejos e 20% para metas financeiras",
+        "Direciona 50% para investimentos de alto risco, 30% para poupança e 20% para emergências",
+        "Sugere usar 50% em cartões, 30% em empréstimos e 20% em seguros"
+      ],
+      "correct_answer": 1,
+      "explanation": "A regra 50-30-20 divide a renda líquida em necessidades (50%), desejos (30%) e objetivos financeiros como reserva e investimentos (20%), facilitando o controle inicial do orçamento.",
+      "xp_value": 12
+    },
+    {
+      "id": "q036",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "planejamento_financeiro",
+      "difficulty": "medio",
+      "context": "Você quer usar aplicativos de finanças para manter sua disciplina semanal.",
+      "question": "Descreva um plano semanal de acompanhamento financeiro usando aplicativos de controle de gastos e metas.",
+      "explanation": "Uma boa resposta inclui: 1) Registrar automaticamente transações (cartão/pix) no app, 2) Categorizar despesas e definir alertas de teto, 3) Revisar semanalmente relatórios e ajustar metas, 4) Conectar o app a objetivos (ex.: reservar 20% para emergências), 5) Documentar aprendizados para a semana seguinte.",
+      "xp_value": 18,
+      "keywords": ["aplicativos", "monitoramento", "categorias", "alertas", "revisão"]
+    },
+    {
+      "id": "q037",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "score_credito",
+      "difficulty": "medio",
+      "context": "Você quer acompanhar seu histórico de crédito para planejar um financiamento futuro.",
+      "question": "Qual prática ajuda diretamente a manter o score de crédito saudável ao longo do tempo?",
+      "options": [
+        "Solicitar aumento de limite todo mês",
+        "Monitorar o score periodicamente e manter cadastro atualizado nos bureaus",
+        "Fechar cartões antigos para parecer que usa pouco crédito",
+        "Concentrar todas as despesas em um único cartão no limite máximo"
+      ],
+      "correct_answer": 1,
+      "explanation": "Consultar o score com frequência, atualizar dados cadastrais e agir rapidamente em caso de inconsistências reduz erros no relatório e demonstra uso responsável do crédito.",
+      "xp_value": 18
+    },
+    {
+      "id": "q038",
+      "type": "discursiva",
+      "session": "credito",
+      "phase": "emprestimos",
+      "difficulty": "medio",
+      "context": "Você avalia contratar um empréstimo consignado para reorganizar dívidas.",
+      "question": "Liste os passos para decidir se o empréstimo consignado é a melhor alternativa e como evitar novos endividamentos.",
+      "explanation": "Resposta deve citar: 1) Levantar todas as dívidas e taxas atuais, 2) Comparar o CET do consignado com outras opções, 3) Garantir parcela inferior a 30% da renda, 4) Planejar uso do valor para quitar dívidas caras primeiro, 5) Criar controles (orçamento e fundo) para não usar crédito novamente de forma impulsiva.",
+      "xp_value": 20,
+      "keywords": ["consignado", "CET", "priorização", "controle", "renda"]
+    },
+    {
+      "id": "q039",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "estrategias_avancadas",
+      "difficulty": "avancado",
+      "context": "Você está avaliando incluir investimentos ESG na carteira.",
+      "question": "O que caracteriza um investimento ESG?",
+      "options": [
+        "Apenas empresas com lucro acima da média",
+        "Ativos que consideram critérios ambientais, sociais e de governança na análise",
+        "Somente investimentos isentos de imposto de renda",
+        "Qualquer empresa listada no índice Ibovespa"
+      ],
+      "correct_answer": 1,
+      "explanation": "Investimentos ESG incorporam fatores ambientais, sociais e de governança ao processo de seleção, buscando impacto positivo aliado ao retorno financeiro.",
+      "xp_value": 22
+    },
+    {
+      "id": "q040",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "tributacao_investimentos",
+      "difficulty": "avancado",
+      "context": "Você quer entender como impostos afetam diferentes ativos.",
+      "question": "Explique como funciona o come-cotas em fundos e como a tributação difere entre renda fixa, ações e fundos imobiliários.",
+      "explanation": "Resposta deve mencionar: 1) Come-cotas semestral que antecipa IR em fundos de renda fixa/ multimercados, 2) Alíquotas regressivas para renda fixa conforme prazo, 3) Alíquota fixa de 15% para ganhos líquidos em ações (com isenção até R$ 20 mil/mês em vendas), 4) Rendimentos de FIIs tributados em 15% para ganhos de capital e isentos nos proventos se cumprirem regras, 5) Importância de registrar DARF dentro do prazo.",
+      "xp_value": 25,
+      "keywords": ["come-cotas", "IR", "regressivo", "ações", "FIIs"]
+    },
+    {
+      "id": "q041",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "medio",
+      "context": "Você considera refinanciar seu imóvel após alguns anos de contrato.",
+      "question": "Quando o refinanciamento imobiliário tende a fazer sentido?",
+      "options": [
+        "Quando as taxas atuais estão menores e você pretende alongar ou reduzir o prazo com custo total menor",
+        "Quando o imóvel desvalorizou e você quer parcelas maiores",
+        "Sempre que o banco oferece qualquer novo produto",
+        "Apenas quando faltam menos de duas parcelas para quitar"
+      ],
+      "correct_answer": 0,
+      "explanation": "Refinanciar vale quando novas taxas reduzem o CET ou adequam o prazo/parcela sem aumentar o custo total. É preciso comparar novamente custos, seguros e tarifas.",
+      "xp_value": 20
+    },
+    {
+      "id": "q042",
+      "type": "discursiva",
+      "session": "financiamento",
+      "phase": "analise_condicoes",
+      "difficulty": "medio",
+      "context": "Você quer garantir que um novo financiamento caiba no orçamento familiar.",
+      "question": "Monte um checklist para avaliar se as parcelas de um financiamento cabem no orçamento sem comprometer objetivos futuros.",
+      "explanation": "Checklist deve incluir: 1) Cálculo da renda líquida familiar e limite de 30%, 2) Simulação com diferentes prazos e indexadores, 3) Reserva para custos adicionais (seguros, taxas, manutenção), 4) Stress test com aumento de juros/inflação, 5) Continuidade de aportes para reserva e aposentadoria mesmo após assumir a parcela.",
+      "xp_value": 18,
+      "keywords": ["renda", "simulação", "custos", "stress test", "objetivos"]
     }
   ]
 }
