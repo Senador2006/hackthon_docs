@@ -70,17 +70,3 @@ Jogo simples de perguntas e respostas sobre educação financeira
 - Separa por materia
 - Contextualização nas perguntas
 
-```
-json
-{
-    dificuldade:{
-        iniciante, basico, medio, avançado
-    }
-    materia: {
-        introdução , credito, investimentos, financiamento 
-    }
-    contexto: {}
-    pergunta: {}
-    resposta: {}
-}
-```
