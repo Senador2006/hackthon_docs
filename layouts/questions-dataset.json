@@ -1,0 +1,521 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2024-01-01",
+    "total_questions": 120,
+    "subjects": ["introducao", "credito", "investimentos", "financiamento"]
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "conceitos_basicos",
+      "difficulty": "iniciante",
+      "context": "Você está começando a aprender sobre educação financeira e precisa entender os conceitos básicos.",
+      "question": "O que é uma reserva de emergência?",
+      "options": [
+        "Dinheiro guardado para compras supérfluas",
+        "Valor reservado para imprevistos e situações de urgência",
+        "Investimento de alto risco",
+        "Conta corrente comum"
+      ],
+      "correct_answer": 1,
+      "explanation": "A reserva de emergência é um valor guardado especificamente para cobrir gastos inesperados, como desemprego, doenças ou reparos urgentes.",
+      "xp_value": 10
+    },
+    {
+      "id": "q002",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "conceitos_basicos",
+      "difficulty": "iniciante",
+      "context": "Você está aprendendo sobre planejamento financeiro pessoal.",
+      "question": "Explique com suas palavras o que é educação financeira e por que ela é importante.",
+      "explanation": "Educação financeira é o conjunto de conhecimentos e habilidades que permitem às pessoas tomar decisões informadas sobre seus recursos financeiros. É importante porque ajuda a alcançar objetivos pessoais, evitar dívidas desnecessárias e construir segurança financeira.",
+      "xp_value": 15,
+      "keywords": ["conhecimento", "decisões", "recursos", "objetivos", "segurança"]
+    },
+    {
+      "id": "q003",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "orcamento_pessoal",
+      "difficulty": "iniciante",
+      "context": "Você está aprendendo a organizar suas finanças pessoais.",
+      "question": "Qual é o primeiro passo para criar um orçamento pessoal?",
+      "options": [
+        "Investir todo o dinheiro disponível",
+        "Anotar todas as receitas e despesas",
+        "Contratar um consultor financeiro",
+        "Abrir uma conta poupança"
+      ],
+      "correct_answer": 1,
+      "explanation": "O primeiro passo é conhecer sua situação financeira atual, anotando todas as receitas e despesas para entender para onde o dinheiro está indo.",
+      "xp_value": 10
+    },
+    {
+      "id": "q004",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "orcamento_pessoal",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre controle de gastos.",
+      "question": "Descreva três estratégias para reduzir gastos desnecessários no seu dia a dia.",
+      "explanation": "Algumas estratégias incluem: 1) Criar uma lista antes de fazer compras, 2) Comparar preços antes de comprar, 3) Evitar compras por impulso, 4) Usar aplicativos de controle financeiro, 5) Estabelecer metas de economia.",
+      "xp_value": 15,
+      "keywords": ["lista", "comparar", "impulso", "controle", "metas"]
+    },
+    {
+      "id": "q005",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "reserva_emergencia",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre segurança financeira.",
+      "question": "Qual é o valor ideal para uma reserva de emergência?",
+      "options": [
+        "1 mês de despesas",
+        "3 a 6 meses de despesas",
+        "1 ano de salário",
+        "Não é necessário ter reserva"
+      ],
+      "correct_answer": 1,
+      "explanation": "O ideal é ter de 3 a 6 meses de despesas guardadas em uma aplicação de fácil acesso, como poupança ou conta corrente.",
+      "xp_value": 12
+    },
+    {
+      "id": "q006",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "reserva_emergencia",
+      "difficulty": "basico",
+      "context": "Você está planejando criar sua reserva de emergência.",
+      "question": "Explique onde você deve guardar sua reserva de emergência e por quê.",
+      "explanation": "A reserva de emergência deve ser guardada em aplicações de fácil acesso e baixo risco, como poupança ou conta corrente. Isso permite retirar o dinheiro rapidamente quando necessário, sem perder valor ou pagar taxas.",
+      "xp_value": 15,
+      "keywords": ["acesso", "risco", "poupança", "rapidez", "taxas"]
+    },
+    {
+      "id": "q007",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "planejamento_financeiro",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre planejamento financeiro de longo prazo.",
+      "question": "O que é um planejamento financeiro?",
+      "options": [
+        "Apenas controlar gastos mensais",
+        "Um processo contínuo de definição de objetivos e estratégias financeiras",
+        "Investir todo o dinheiro disponível",
+        "Contratar seguros para tudo"
+      ],
+      "correct_answer": 1,
+      "explanation": "Planejamento financeiro é um processo contínuo que envolve definir objetivos, analisar a situação atual, criar estratégias e acompanhar resultados.",
+      "xp_value": 15
+    },
+    {
+      "id": "q008",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "planejamento_financeiro",
+      "difficulty": "medio",
+      "context": "Você está criando seu primeiro planejamento financeiro.",
+      "question": "Quais são os principais componentes de um planejamento financeiro pessoal?",
+      "explanation": "Os principais componentes são: 1) Diagnóstico financeiro (receitas e despesas), 2) Definição de objetivos (curto, médio e longo prazo), 3) Estratégias de economia e investimento, 4) Controle e acompanhamento periódico, 5) Ajustes conforme necessário.",
+      "xp_value": 20,
+      "keywords": ["diagnóstico", "objetivos", "estratégias", "controle", "ajustes"]
+    },
+    {
+      "id": "q009",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "metas_financeiras",
+      "difficulty": "medio",
+      "context": "Você está aprendendo a estabelecer metas financeiras.",
+      "question": "Qual é a melhor forma de estabelecer metas financeiras?",
+      "options": [
+        "Metas genéricas sem prazo definido",
+        "Metas específicas, mensuráveis e com prazo (método SMART)",
+        "Metas impossíveis de alcançar",
+        "Não estabelecer metas"
+      ],
+      "correct_answer": 1,
+      "explanation": "O método SMART ajuda a criar metas Específicas, Mensuráveis, Atingíveis, Relevantes e Temporais, aumentando as chances de sucesso.",
+      "xp_value": 15
+    },
+    {
+      "id": "q010",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "metas_financeiras",
+      "difficulty": "avancado",
+      "context": "Você está definindo suas metas financeiras para o próximo ano.",
+      "question": "Descreva uma meta financeira de curto prazo, médio prazo e longo prazo, explicando como você planejaria alcançá-las.",
+      "explanation": "Exemplos: Curto prazo (3-6 meses): Reserva de emergência - economizar X% do salário mensalmente. Médio prazo (1-3 anos): Viagem ou compra de bem - criar plano de economia específico. Longo prazo (5+ anos): Aposentadoria ou casa própria - investimentos de longo prazo e disciplina.",
+      "xp_value": 25,
+      "keywords": ["curto", "médio", "longo", "plano", "disciplina"]
+    },
+    {
+      "id": "q011",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "entendendo_credito",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre como usar o crédito de forma consciente.",
+      "question": "Qual é a melhor prática ao usar cartão de crédito?",
+      "options": [
+        "Usar todo o limite disponível",
+        "Pagar apenas o valor mínimo",
+        "Pagar a fatura integralmente antes do vencimento",
+        "Não verificar a fatura mensalmente"
+      ],
+      "correct_answer": 2,
+      "explanation": "Pagar a fatura integralmente antes do vencimento evita juros e mantém um bom histórico de crédito.",
+      "xp_value": 15
+    },
+    {
+      "id": "q012",
+      "type": "discursiva",
+      "session": "credito",
+      "phase": "entendendo_credito",
+      "difficulty": "basico",
+      "context": "Você está entendendo os diferentes tipos de crédito disponíveis.",
+      "question": "Explique a diferença entre crédito rotativo e crédito parcelado.",
+      "explanation": "Crédito rotativo permite que você use o limite repetidamente conforme paga (como cartão de crédito). Crédito parcelado é um empréstimo com valor fixo que você paga em parcelas pré-determinadas. O rotativo geralmente tem juros mais altos.",
+      "xp_value": 15,
+      "keywords": ["rotativo", "parcelado", "limite", "parcelas", "juros"]
+    },
+    {
+      "id": "q013",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "cartao_credito",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre cartão de crédito.",
+      "question": "O que acontece se você pagar apenas o valor mínimo do cartão de crédito?",
+      "options": [
+        "Não paga juros",
+        "Paga juros sobre o saldo devedor restante",
+        "Melhora seu score de crédito",
+        "Ganha pontos de recompensa"
+      ],
+      "correct_answer": 1,
+      "explanation": "Ao pagar apenas o mínimo, você paga juros altos sobre o saldo restante, o que pode gerar uma dívida crescente.",
+      "xp_value": 15
+    },
+    {
+      "id": "q014",
+      "type": "discursiva",
+      "session": "credito",
+      "phase": "cartao_credito",
+      "difficulty": "medio",
+      "context": "Você está aprendendo a usar o cartão de crédito de forma inteligente.",
+      "question": "Cite três benefícios e três riscos do uso do cartão de crédito.",
+      "explanation": "Benefícios: 1) Facilidade de pagamento, 2) Proteção contra fraudes, 3) Programas de recompensa, 4) Construção de histórico de crédito. Riscos: 1) Juros altos se não pagar integralmente, 2) Facilidade de endividamento, 3) Compra por impulso, 4) Taxas e anuidades.",
+      "xp_value": 20,
+      "keywords": ["facilidade", "proteção", "recompensa", "juros", "endividamento"]
+    },
+    {
+      "id": "q015",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "emprestimos",
+      "difficulty": "medio",
+      "context": "Você está analisando opções de empréstimo.",
+      "question": "O que é importante verificar antes de contratar um empréstimo?",
+      "options": [
+        "Apenas a taxa de juros",
+        "CET (Custo Efetivo Total), condições e sua capacidade de pagamento",
+        "Apenas o valor da parcela",
+        "Apenas o prazo"
+      ],
+      "correct_answer": 1,
+      "explanation": "É essencial verificar o CET (que inclui todos os custos), as condições do contrato e principalmente se você tem capacidade real de pagar as parcelas.",
+      "xp_value": 18
+    },
+    {
+      "id": "q016",
+      "type": "discursiva",
+      "session": "credito",
+      "phase": "emprestimos",
+      "difficulty": "medio",
+      "context": "Você está considerando fazer um empréstimo pessoal.",
+      "question": "Explique quando é apropriado fazer um empréstimo e quando não é recomendado.",
+      "explanation": "Apropriado: Para investimentos que geram retorno, emergências reais quando não há reserva, ou consolidação de dívidas com juros menores. Não recomendado: Para gastos supérfluos, quando já há muitas dívidas, ou quando compromete mais de 30% da renda.",
+      "xp_value": 20,
+      "keywords": ["investimento", "emergência", "consolidação", "supérfluos", "renda"]
+    },
+    {
+      "id": "q017",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "score_credito",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre score de crédito.",
+      "question": "O que melhora seu score de crédito?",
+      "options": [
+        "Não usar crédito nunca",
+        "Pagar contas em dia e usar crédito de forma responsável",
+        "Ter muitas dívidas",
+        "Ignorar prazos de pagamento"
+      ],
+      "correct_answer": 1,
+      "explanation": "Pagar todas as contas em dia e usar crédito de forma responsável (sem ultrapassar limites) melhora gradualmente seu score.",
+      "xp_value": 18
+    },
+    {
+      "id": "q018",
+      "type": "discursiva",
+      "session": "credito",
+      "phase": "score_credito",
+      "difficulty": "avancado",
+      "context": "Você quer melhorar seu score de crédito.",
+      "question": "Descreva cinco ações práticas para melhorar seu score de crédito.",
+      "explanation": "1) Pagar todas as contas em dia, 2) Manter uso do crédito abaixo de 30% do limite, 3) Não abrir muitas contas ao mesmo tempo, 4) Manter contas antigas abertas (mostra histórico), 5) Verificar e corrigir erros no relatório de crédito regularmente.",
+      "xp_value": 25,
+      "keywords": ["pagar", "limite", "contas", "histórico", "verificar"]
+    },
+    {
+      "id": "q019",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "introducao_investimentos",
+      "difficulty": "medio",
+      "context": "Você está explorando opções de investimento para fazer seu dinheiro render.",
+      "question": "Qual é a principal diferença entre renda fixa e renda variável?",
+      "options": [
+        "Não há diferença",
+        "Renda fixa tem retorno previsível, renda variável não",
+        "Renda variável é sempre mais segura",
+        "Renda fixa não existe no Brasil"
+      ],
+      "correct_answer": 1,
+      "explanation": "Renda fixa oferece retorno previsível e menor risco, enquanto renda variável tem retorno incerto e maior risco.",
+      "xp_value": 20
+    },
+    {
+      "id": "q020",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "introducao_investimentos",
+      "difficulty": "medio",
+      "context": "Você está começando a investir.",
+      "question": "Explique o que significa diversificação de investimentos e por que é importante.",
+      "explanation": "Diversificação é distribuir investimentos em diferentes tipos de ativos, setores e prazos. É importante porque reduz o risco - se um investimento perder valor, outros podem compensar. 'Não coloque todos os ovos na mesma cesta'.",
+      "xp_value": 20,
+      "keywords": ["diversificação", "distribuir", "risco", "compensar", "cesta"]
+    },
+    {
+      "id": "q021",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_fixa",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre investimentos de renda fixa.",
+      "question": "O que é um CDB (Certificado de Depósito Bancário)?",
+      "options": [
+        "Um tipo de ação",
+        "Um título de dívida emitido por bancos",
+        "Uma moeda digital",
+        "Um tipo de fundo imobiliário"
+      ],
+      "correct_answer": 1,
+      "explanation": "CDB é um título de dívida onde você empresta dinheiro ao banco e recebe juros em troca. É um investimento de renda fixa.",
+      "xp_value": 18
+    },
+    {
+      "id": "q022",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "renda_fixa",
+      "difficulty": "medio",
+      "context": "Você está comparando opções de renda fixa.",
+      "question": "Compare Tesouro Direto, CDB e Poupança, explicando as principais diferenças.",
+      "explanation": "Tesouro Direto: títulos públicos, seguro, liquidez variável, rendimento atrelado à Selic ou IPCA. CDB: emitido por bancos, protegido pelo FGC até R$ 250k, rendimento geralmente maior que poupança. Poupança: mais acessível, liquidez diária, rendimento menor, protegido pelo FGC.",
+      "xp_value": 22,
+      "keywords": ["tesouro", "CDB", "poupança", "rendimento", "liquidez"]
+    },
+    {
+      "id": "q023",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_variavel",
+      "difficulty": "avancado",
+      "context": "Você está aprendendo sobre ações e renda variável.",
+      "question": "O que significa 'dividend yield' em ações?",
+      "options": [
+        "O preço da ação",
+        "A porcentagem de retorno através de dividendos pagos",
+        "A quantidade de ações disponíveis",
+        "A taxa de juros"
+      ],
+      "correct_answer": 1,
+      "explanation": "Dividend yield é a porcentagem que representa o retorno anual através de dividendos pagos pela empresa, em relação ao preço da ação.",
+      "xp_value": 22
+    },
+    {
+      "id": "q024",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "renda_variavel",
+      "difficulty": "avancado",
+      "context": "Você está considerando investir em ações.",
+      "question": "Explique os principais riscos e oportunidades de investir em ações.",
+      "explanation": "Riscos: Volatilidade (preços sobem e descem), perda de capital, necessidade de conhecimento, tempo para resultados. Oportunidades: Alto potencial de retorno, participação no crescimento de empresas, dividendos, proteção contra inflação no longo prazo.",
+      "xp_value": 25,
+      "keywords": ["volatilidade", "retorno", "crescimento", "dividendos", "inflação"]
+    },
+    {
+      "id": "q025",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "fundos_investimento",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre fundos de investimento.",
+      "question": "O que é um fundo de investimento?",
+      "options": [
+        "Uma conta poupança",
+        "Um condomínio de investidores que aplicam recursos coletivamente",
+        "Um tipo de empréstimo",
+        "Uma ação individual"
+      ],
+      "correct_answer": 1,
+      "explanation": "Fundo de investimento é um condomínio onde vários investidores aplicam recursos que são geridos por um gestor profissional.",
+      "xp_value": 18
+    },
+    {
+      "id": "q026",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "fundos_investimento",
+      "difficulty": "medio",
+      "context": "Você está avaliando fundos de investimento.",
+      "question": "Quais são as principais vantagens e desvantagens de investir em fundos?",
+      "explanation": "Vantagens: Gestão profissional, diversificação automática, acesso a investimentos complexos, praticidade. Desvantagens: Taxas de administração e performance, menos controle sobre onde o dinheiro está aplicado, possível resgate com prazo.",
+      "xp_value": 20,
+      "keywords": ["gestão", "diversificação", "taxas", "controle", "resgate"]
+    },
+    {
+      "id": "q027",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "estrategias_avancadas",
+      "difficulty": "avancado",
+      "context": "Você está aprendendo estratégias avançadas de investimento.",
+      "question": "O que é alocação de ativos?",
+      "options": [
+        "Comprar apenas um tipo de investimento",
+        "Distribuir investimentos entre diferentes classes de ativos conforme perfil",
+        "Investir tudo em ações",
+        "Não investir em nada"
+      ],
+      "correct_answer": 1,
+      "explanation": "Alocação de ativos é a estratégia de distribuir investimentos entre diferentes classes (ações, títulos, imóveis) conforme seu perfil de risco e objetivos.",
+      "xp_value": 22
+    },
+    {
+      "id": "q028",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "estrategias_avancadas",
+      "difficulty": "avancado",
+      "context": "Você está criando sua estratégia de investimento.",
+      "question": "Descreva como você montaria uma carteira de investimentos considerando seu perfil de risco e objetivos de longo prazo.",
+      "explanation": "Para perfil conservador: maior parte em renda fixa (70-80%), menor em renda variável. Moderado: equilíbrio entre renda fixa e variável (50-50). Arrojado: maior parte em renda variável (60-70%). Sempre considerar: idade, objetivos, prazo, necessidade de liquidez.",
+      "xp_value": 25,
+      "keywords": ["perfil", "risco", "carteira", "objetivos", "liquidez"]
+    },
+    {
+      "id": "q029",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "avancado",
+      "context": "Você está analisando opções de financiamento imobiliário.",
+      "question": "O que significa CET (Custo Efetivo Total) em um financiamento?",
+      "options": [
+        "Apenas a taxa de juros",
+        "O valor total do imóvel",
+        "Todos os custos envolvidos no financiamento expressos em taxa anual",
+        "A entrada do financiamento"
+      ],
+      "correct_answer": 2,
+      "explanation": "O CET inclui todos os custos do financiamento: juros, taxas, seguros e encargos, expressos em uma taxa anual.",
+      "xp_value": 25
+    },
+    {
+      "id": "q030",
+      "type": "discursiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "avancado",
+      "context": "Você está planejando financiar um imóvel.",
+      "question": "Quais fatores você deve considerar antes de financiar um imóvel?",
+      "explanation": "Fatores importantes: 1) Capacidade de pagamento (parcela não deve exceder 30% da renda), 2) Valor da entrada (quanto maior, melhor), 3) CET e taxas, 4) Prazo do financiamento, 5) Condições do imóvel e localização, 6) Planejamento de longo prazo.",
+      "xp_value": 25,
+      "keywords": ["capacidade", "entrada", "CET", "prazo", "planejamento"]
+    },
+    {
+      "id": "q031",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_veicular",
+      "difficulty": "medio",
+      "context": "Você está considerando financiar um veículo.",
+      "question": "Qual é a principal desvantagem do financiamento veicular?",
+      "options": [
+        "O veículo desvaloriza rapidamente enquanto você ainda está pagando",
+        "Você ganha pontos de fidelidade",
+        "Não há desvantagens",
+        "O veículo valoriza com o tempo"
+      ],
+      "correct_answer": 0,
+      "explanation": "Veículos desvalorizam rapidamente (depreciação), então você pode acabar devendo mais do que o veículo vale.",
+      "xp_value": 18
+    },
+    {
+      "id": "q032",
+      "type": "discursiva",
+      "session": "financiamento",
+      "phase": "financiamento_veicular",
+      "difficulty": "medio",
+      "context": "Você está avaliando se deve financiar um carro.",
+      "question": "Compare as opções de comprar um carro à vista, financiar ou comprar usado. Quais são os prós e contras de cada opção?",
+      "explanation": "À vista: Prós - sem juros, propriedade imediata. Contras - requer capital disponível. Financiado: Prós - acesso imediato, parcelas. Contras - juros altos, desvalorização. Usado: Prós - menor custo inicial. Contras - manutenção potencial, histórico desconhecido.",
+      "xp_value": 22,
+      "keywords": ["vista", "financiado", "usado", "juros", "manutenção"]
+    },
+    {
+      "id": "q033",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "analise_condicoes",
+      "difficulty": "avancado",
+      "context": "Você está analisando condições de financiamento.",
+      "question": "O que é importante verificar em um contrato de financiamento?",
+      "options": [
+        "Apenas o valor da parcela",
+        "CET, taxas, multas, condições de quitação antecipada e cláusulas",
+        "Apenas o prazo",
+        "Apenas a taxa de juros"
+      ],
+      "correct_answer": 1,
+      "explanation": "É essencial verificar todos os custos (CET), taxas, multas, condições de quitação antecipada e todas as cláusulas do contrato antes de assinar.",
+      "xp_value": 20
+    },
+    {
+      "id": "q034",
+      "type": "discursiva",
+      "session": "financiamento",
+      "phase": "analise_condicoes",
+      "difficulty": "avancado",
+      "context": "Você está negociando um financiamento.",
+      "question": "Explique o que significa quitação antecipada e quais são os benefícios e cuidados ao fazer isso.",
+      "explanation": "Quitação antecipada é pagar o financiamento antes do prazo. Benefícios: economiza juros, libera renda. Cuidados: verificar se há multa ou desconto, calcular se vale a pena (considerando investimentos alternativos), verificar impacto no score de crédito.",
+      "xp_value": 22,
+      "keywords": ["quitação", "juros", "multa", "desconto", "score"]
+    }
+  ]
+}
+

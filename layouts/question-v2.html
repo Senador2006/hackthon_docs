@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta - FinEdu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">💰 FinEdu</div>
+            <div class="xp-display">
+                <span>⭐</span>
+                <span class="xp-number" id="totalXP">250</span>
+                <span>XP</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div id="timer">⏱️ 00:30</div>
+            <div class="avatar">JD</div>
+        </div>
+    </header>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Barra de Progresso -->
+        <div class="card mb-lg">
+            <div class="progress-bar">
+                <div class="progress-fill" id="questionProgress" style="width: 60%;"></div>
+            </div>
+            <small class="mt-sm">Pergunta <span id="currentQuestion">3</span> de <span id="totalQuestions">5</span></small>
+        </div>
+
+        <!-- Card de Contexto -->
+        <div class="card mb-lg" id="contextCard">
+            <div class="caption mb-sm">📚 Contexto</div>
+            <p id="questionContext">
+                Carregando...
+            </p>
+        </div>
+
+        <!-- Pergunta Principal -->
+        <div class="card mb-lg">
+            <div class="question-type-badge" id="questionTypeBadge"></div>
+            <h2 id="questionText">
+                Carregando pergunta...
+            </h2>
+        </div>
+
+        <!-- Container para Perguntas Objetivas -->
+        <div id="objectiveContainer" class="grid grid-2 mb-lg hidden">
+            <!-- Opções serão inseridas dinamicamente -->
+        </div>
+
+        <!-- Container para Perguntas Discursivas -->
+        <div id="discursiveContainer" class="mb-lg hidden">
+            <div class="card">
+                <label for="discursiveAnswer" class="discursive-label">
+                    Sua resposta:
+                </label>
+                <textarea 
+                    id="discursiveAnswer" 
+                    class="discursive-textarea" 
+                    rows="6" 
+                    placeholder="Digite sua resposta aqui..."
+                    minlength="20"
+                ></textarea>
+                <small class="discursive-hint">
+                    💡 Dica: Tente incluir os conceitos principais relacionados à pergunta.
+                </small>
+                <div class="character-count">
+                    <span id="charCount">0</span> / mínimo 20 caracteres
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão Confirmar -->
+        <div class="text-center">
+            <button class="btn btn-primary" id="confirmBtn" onclick="confirmAnswer()" disabled>
+                Confirmar Resposta
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        let currentQuestion = null;
+        let selectedOption = null;
+        let timeLeft = 30;
+        let timerInterval;
+        let questionType = 'objetiva'; // ou 'discursiva'
+
+        // Obtém parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const session = urlParams.get('session') || 'introducao';
+        const phase = urlParams.get('phase') || 'conceitos_basicos';
+
+        // Carrega pergunta aleatória
+        async function loadQuestion() {
+            try {
+                // Tenta pegar perguntas não respondidas primeiro
+                const unanswered = await window.FinEdu.getUnansweredQuestions(session, phase);
+                
+                if (unanswered.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * unanswered.length);
+                    currentQuestion = unanswered[randomIndex];
+                } else {
+                    // Se todas foram respondidas, pega qualquer uma
+                    currentQuestion = await window.FinEdu.getRandomQuestion(session, phase);
+                }
+
+                if (!currentQuestion) {
+                    alert('Erro ao carregar pergunta. Redirecionando...');
+                    window.location.href = 'dashboard-v2.html';
+                    return;
+                }
+
+                displayQuestion(currentQuestion);
+            } catch (error) {
+                console.error('Erro ao carregar pergunta:', error);
+                alert('Erro ao carregar pergunta. Tente novamente.');
+            }
+        }
+
+        function displayQuestion(question) {
+            questionType = question.type;
+            
+            // Atualiza contexto
+            document.getElementById('questionContext').textContent = question.context;
+            
+            // Atualiza pergunta
+            document.getElementById('questionText').textContent = question.question;
+            
+            // Atualiza badge de tipo
+            const badge = document.getElementById('questionTypeBadge');
+            if (question.type === 'objetiva') {
+                badge.textContent = '📝 Múltipla Escolha';
+                badge.className = 'question-type-badge badge-objective';
+                showObjectiveQuestion(question);
+            } else {
+                badge.textContent = '✍️ Discursiva';
+                badge.className = 'question-type-badge badge-discursive';
+                showDiscursiveQuestion(question);
+            }
+
+            // Inicia timer
+            startTimer();
+        }
+
+        function showObjectiveQuestion(question) {
+            const objectiveContainer = document.getElementById('objectiveContainer');
+            const discursiveContainer = document.getElementById('discursiveContainer');
+            
+            objectiveContainer.classList.remove('hidden');
+            discursiveContainer.classList.add('hidden');
+            
+            // Limpa opções anteriores
+            objectiveContainer.innerHTML = '';
+            
+            // Cria cards de opções
+            question.options.forEach((option, index) => {
+                const optionCard = document.createElement('div');
+                optionCard.className = 'card card-question';
+                optionCard.setAttribute('data-option', index);
+                optionCard.onclick = () => selectOption(index);
+                
+                optionCard.innerHTML = `
+                    <strong>Opção ${index + 1}</strong>
+                    <p>${option}</p>
+                `;
+                
+                objectiveContainer.appendChild(optionCard);
+            });
+        }
+
+        function showDiscursiveQuestion(question) {
+            const objectiveContainer = document.getElementById('objectiveContainer');
+            const discursiveContainer = document.getElementById('discursiveContainer');
+            
+            objectiveContainer.classList.add('hidden');
+            discursiveContainer.classList.remove('hidden');
+            
+            // Limpa resposta anterior
+            document.getElementById('discursiveAnswer').value = '';
+            updateCharacterCount();
+            
+            // Adiciona listener para validação em tempo real
+            const textarea = document.getElementById('discursiveAnswer');
+            textarea.addEventListener('input', () => {
+                updateCharacterCount();
+                validateDiscursiveInput();
+            });
+        }
+
+        function updateCharacterCount() {
+            const textarea = document.getElementById('discursiveAnswer');
+            const charCount = document.getElementById('charCount');
+            const count = textarea.value.length;
+            charCount.textContent = count;
+            
+            if (count < 20) {
+                charCount.style.color = 'var(--color-error)';
+            } else {
+                charCount.style.color = 'var(--color-success)';
+            }
+        }
+
+        function validateDiscursiveInput() {
+            const textarea = document.getElementById('discursiveAnswer');
+            const confirmBtn = document.getElementById('confirmBtn');
+            const isValid = textarea.value.trim().length >= 20;
+            
+            confirmBtn.disabled = !isValid;
+            
+            if (isValid) {
+                textarea.style.borderColor = 'var(--color-success)';
+            } else {
+                textarea.style.borderColor = 'var(--color-border)';
+            }
+        }
+
+        function selectOption(optionIndex) {
+            // Remove seleção anterior
+            document.querySelectorAll('.card-question').forEach(card => {
+                card.classList.remove('selected');
+            });
+
+            // Adiciona seleção atual
+            const selectedCard = document.querySelector(`[data-option="${optionIndex}"]`);
+            selectedCard.classList.add('selected');
+            selectedOption = optionIndex;
+
+            // Habilita botão de confirmar
+            document.getElementById('confirmBtn').disabled = false;
+        }
+
+        function startTimer() {
+            timeLeft = 30; // Reset timer
+            clearInterval(timerInterval);
+            
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                document.getElementById('timer').textContent = 
+                    `⏱️ ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    confirmAnswer();
+                }
+            }, 1000);
+        }
+
+        async function confirmAnswer() {
+            clearInterval(timerInterval);
+
+            let isCorrect = false;
+            let userAnswer = null;
+
+            if (questionType === 'objetiva') {
+                if (selectedOption === null) return;
+                
+                // Desabilita todas as opções
+                document.querySelectorAll('.card-question').forEach(card => {
+                    card.style.pointerEvents = 'none';
+                });
+
+                isCorrect = selectedOption === currentQuestion.correct_answer;
+                userAnswer = selectedOption;
+
+                // Mostra resultado
+                const options = document.querySelectorAll('.card-question');
+                options.forEach((card, index) => {
+                    if (index === currentQuestion.correct_answer) {
+                        card.classList.add('correct');
+                        card.innerHTML += '<div style="text-align: right; margin-top: 8px; font-size: 24px;">✓</div>';
+                    } else if (index === selectedOption && index !== currentQuestion.correct_answer) {
+                        card.classList.add('incorrect');
+                        card.innerHTML += '<div style="text-align: right; margin-top: 8px; font-size: 24px;">✗</div>';
+                    }
+                });
+            } else {
+                // Pergunta discursiva
+                const textarea = document.getElementById('discursiveAnswer');
+                userAnswer = textarea.value.trim();
+                
+                if (userAnswer.length < 20) return;
+                
+                textarea.disabled = true;
+                
+                // Valida usando palavras-chave
+                isCorrect = window.FinEdu.validateDiscursiveAnswer(
+                    userAnswer, 
+                    currentQuestion.keywords || [],
+                    2 // mínimo de 2 palavras-chave
+                );
+            }
+
+            // Desabilita botão
+            document.getElementById('confirmBtn').disabled = true;
+
+            // Marca pergunta como respondida
+            window.FinEdu.markQuestionAsAnswered(currentQuestion.id);
+
+            // Redireciona após 2 segundos
+            setTimeout(() => {
+                window.location.href = `result.html?correct=${isCorrect}&xp=${currentQuestion.xp_value}&type=${questionType}&questionId=${currentQuestion.id}`;
+            }, 2000);
+        }
+
+        // Inicializa ao carregar
+        window.addEventListener('DOMContentLoaded', () => {
+            loadQuestion();
+        });
+    </script>
+</body>
+</html>
+

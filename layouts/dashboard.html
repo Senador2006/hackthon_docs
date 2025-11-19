@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hackthon Educação Financeira</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">💰 FinEdu</div>
+            <div class="xp-display">
+                <span>⭐</span>
+                <span class="xp-number" id="totalXP">250</span>
+                <span>XP</span>
+            </div>
+            <div>
+                <small>Nível <strong id="userLevel">3</strong></small>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="avatar">JD</div>
+        </div>
+    </header>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Barra de Progresso XP -->
+        <div class="card mb-lg">
+            <h3>Progresso para o próximo nível</h3>
+            <div class="xp-bar">
+                <div class="xp-fill" style="width: 65%;"></div>
+            </div>
+            <small class="mt-sm">250 / 400 XP</small>
+        </div>
+
+        <!-- Grid Principal -->
+        <div class="grid grid-2 mb-lg">
+            <!-- Mapa de Níveis -->
+            <div class="card">
+                <h2>🎯 Mapa de Níveis</h2>
+                <div class="level-map">
+                    <div class="level-node completed">
+                        <div class="level-circle">1</div>
+                        <div>
+                            <strong>Primeiros Passos</strong>
+                            <small class="d-block">Introdução - Completado</small>
+                        </div>
+                    </div>
+                    <div class="level-node completed">
+                        <div class="level-circle">2</div>
+                        <div>
+                            <strong>Entendendo Crédito</strong>
+                            <small class="d-block">Crédito - Completado</small>
+                        </div>
+                    </div>
+                    <div class="level-node current">
+                        <div class="level-circle">3</div>
+                        <div>
+                            <strong>Investindo com Sabedoria</strong>
+                            <small class="d-block">Investimentos - Em andamento</small>
+                        </div>
+                    </div>
+                    <div class="level-node available">
+                        <div class="level-circle">4</div>
+                        <div>
+                            <strong>Financiamentos Avançados</strong>
+                            <small class="d-block">Financiamento - Disponível</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Missões Diárias -->
+            <div class="card">
+                <h2>🎁 Missões Diárias</h2>
+                <div class="mission-card mb-md">
+                    <div class="mission-title">Primeiro Dia</div>
+                    <div class="mission-description">Complete 5 perguntas hoje</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%;"></div>
+                    </div>
+                    <div class="mission-reward mt-sm">
+                        <span>⭐</span>
+                        <span>+25 XP</span>
+                    </div>
+                </div>
+                <div class="mission-card mb-md">
+                    <div class="mission-title">Estudante Dedicado</div>
+                    <div class="mission-description">Complete 3 níveis consecutivos</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 66%;"></div>
+                    </div>
+                    <div class="mission-reward mt-sm">
+                        <span>⭐</span>
+                        <span>+100 XP</span>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-title">Semana Produtiva</div>
+                    <div class="mission-description">Responda 20 perguntas esta semana</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 45%;"></div>
+                    </div>
+                    <div class="mission-reward mt-sm">
+                        <span>⭐</span>
+                        <span>+50 XP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conquistas Recentes -->
+        <div class="card mb-lg">
+            <h2>🏆 Conquistas Recentes</h2>
+            <div class="grid grid-3">
+                <div class="text-center">
+                    <div class="badge unlocked">🎯</div>
+                    <h3 class="mt-sm">Iniciante</h3>
+                    <small>Complete seu primeiro nível</small>
+                </div>
+                <div class="text-center">
+                    <div class="badge unlocked">📚</div>
+                    <h3 class="mt-sm">Estudante Aplicado</h3>
+                    <small>Responda 50 perguntas corretamente</small>
+                </div>
+                <div class="text-center">
+                    <div class="badge locked">🏆</div>
+                    <h3 class="mt-sm">Mestre Financeiro</h3>
+                    <small>Alcance 1000 XP</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estatísticas -->
+        <div class="card">
+            <h2>📊 Estatísticas</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">42</div>
+                    <div class="stat-label">Perguntas Respondidas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">85%</div>
+                    <div class="stat-label">Taxa de Acerto</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">7</div>
+                    <div class="stat-label">Dias de Sequência</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Níveis Completados</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

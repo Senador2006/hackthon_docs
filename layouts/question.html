@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta - Hackthon Educação Financeira</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">💰 FinEdu</div>
+            <div class="xp-display">
+                <span>⭐</span>
+                <span class="xp-number">250</span>
+                <span>XP</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div id="timer">⏱️ 00:30</div>
+            <div class="avatar">JD</div>
+        </div>
+    </header>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Barra de Progresso -->
+        <div class="card mb-lg">
+            <div class="progress-bar">
+                <div class="progress-fill" id="questionProgress" style="width: 60%;"></div>
+            </div>
+            <small class="mt-sm">Pergunta 3 de 5</small>
+        </div>
+
+        <!-- Card de Contexto -->
+        <div class="card mb-lg">
+            <div class="caption mb-sm">📚 Contexto</div>
+            <p id="questionContext">
+                Você está aprendendo sobre como usar o crédito de forma consciente e precisa entender as melhores práticas para manter um bom histórico financeiro.
+            </p>
+        </div>
+
+        <!-- Pergunta Principal -->
+        <div class="card mb-lg">
+            <h2 id="questionText">
+                Qual é a melhor prática ao usar cartão de crédito?
+            </h2>
+        </div>
+
+        <!-- Opções de Resposta -->
+        <div class="grid grid-2 mb-lg" id="optionsContainer">
+            <div class="card card-question" data-option="0" onclick="selectOption(0)">
+                <strong>Opção 1</strong>
+                <p>Usar todo o limite disponível</p>
+            </div>
+            <div class="card card-question" data-option="1" onclick="selectOption(1)">
+                <strong>Opção 2</strong>
+                <p>Pagar apenas o valor mínimo</p>
+            </div>
+            <div class="card card-question" data-option="2" onclick="selectOption(2)">
+                <strong>Opção 3</strong>
+                <p>Pagar a fatura integralmente antes do vencimento</p>
+            </div>
+            <div class="card card-question" data-option="3" onclick="selectOption(3)">
+                <strong>Opção 4</strong>
+                <p>Não verificar a fatura mensalmente</p>
+            </div>
+        </div>
+
+        <!-- Botão Confirmar -->
+        <div class="text-center">
+            <button class="btn btn-primary" id="confirmBtn" onclick="confirmAnswer()" disabled>
+                Confirmar Resposta
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let selectedOption = null;
+        const correctAnswer = 2; // Opção 3 é a correta
+        let timeLeft = 30;
+        let timerInterval;
+
+        // Timer
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timer').textContent = `⏱️ ${String(Math.floor(timeLeft / 60)).padStart(2, '0')}:${String(timeLeft % 60).padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    confirmAnswer();
+                }
+            }, 1000);
+        }
+
+        function selectOption(optionIndex) {
+            // Remove seleção anterior
+            document.querySelectorAll('.card-question').forEach(card => {
+                card.classList.remove('selected');
+            });
+
+            // Adiciona seleção atual
+            const selectedCard = document.querySelector(`[data-option="${optionIndex}"]`);
+            selectedCard.classList.add('selected');
+            selectedOption = optionIndex;
+
+            // Habilita botão de confirmar
+            document.getElementById('confirmBtn').disabled = false;
+        }
+
+        function confirmAnswer() {
+            if (selectedOption === null) return;
+
+            clearInterval(timerInterval);
+
+            // Desabilita todas as opções
+            document.querySelectorAll('.card-question').forEach(card => {
+                card.style.pointerEvents = 'none';
+            });
+
+            // Mostra resultado
+            const options = document.querySelectorAll('.card-question');
+            options.forEach((card, index) => {
+                if (index === correctAnswer) {
+                    card.classList.add('correct');
+                    card.innerHTML += '<div style="text-align: right; margin-top: 8px;">✓</div>';
+                } else if (index === selectedOption && index !== correctAnswer) {
+                    card.classList.add('incorrect');
+                    card.innerHTML += '<div style="text-align: right; margin-top: 8px;">✗</div>';
+                }
+            });
+
+            // Desabilita botão
+            document.getElementById('confirmBtn').disabled = true;
+
+            // Redireciona após 2 segundos
+            setTimeout(() => {
+                const isCorrect = selectedOption === correctAnswer;
+                window.location.href = `result.html?correct=${isCorrect}`;
+            }, 2000);
+        }
+
+        // Inicia timer ao carregar
+        window.addEventListener('DOMContentLoaded', () => {
+            startTimer();
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
+

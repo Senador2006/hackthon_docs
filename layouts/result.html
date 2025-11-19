@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado - Hackthon Educação Financeira</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">💰 FinEdu</div>
+            <div class="xp-display">
+                <span>⭐</span>
+                <span class="xp-number" id="totalXP">260</span>
+                <span>XP</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="avatar">JD</div>
+        </div>
+    </header>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <div class="feedback-card fade-in">
+            <!-- Ícone de Feedback -->
+            <div class="feedback-icon success" id="feedbackIcon">
+                ✓
+            </div>
+
+            <!-- Título -->
+            <h1 class="feedback-title" id="feedbackTitle">
+                Resposta Correta!
+            </h1>
+
+            <!-- Ganho de XP -->
+            <div class="xp-gain" id="xpGain">
+                <span>⭐</span>
+                <span>+10 XP</span>
+            </div>
+
+            <!-- Explicação -->
+            <div class="feedback-explanation">
+                <h3>💡 Explicação</h3>
+                <p id="explanationText">
+                    Pagar a fatura integralmente antes do vencimento evita juros e mantém um bom histórico de crédito. 
+                    Esta prática demonstra responsabilidade financeira e ajuda a construir uma pontuação de crédito positiva, 
+                    o que pode facilitar futuras negociações e aprovações de crédito.
+                </p>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div style="display: flex; gap: 16px; justify-content: center; margin-top: 24px;">
+                <button class="btn btn-secondary" onclick="window.location.href='dashboard.html'">
+                    Voltar ao Dashboard
+                </button>
+                <button class="btn btn-primary" onclick="window.location.href='question.html'">
+                    Próxima Pergunta
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Obtém parâmetro da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const isCorrect = urlParams.get('correct') === 'true';
+
+        // Atualiza interface baseado no resultado
+        if (!isCorrect) {
+            document.getElementById('feedbackIcon').textContent = '✗';
+            document.getElementById('feedbackIcon').classList.remove('success');
+            document.getElementById('feedbackIcon').classList.add('error');
+            document.getElementById('feedbackTitle').textContent = 'Resposta Incorreta';
+            document.getElementById('xpGain').style.display = 'none';
+            document.getElementById('explanationText').textContent = 
+                'Não foi dessa vez! A resposta correta é: Pagar a fatura integralmente antes do vencimento. ' +
+                'Esta prática evita juros e mantém um bom histórico de crédito, demonstrando responsabilidade financeira.';
+        }
+
+        // Animação de contador de XP
+        function animateXP() {
+            const xpElement = document.getElementById('totalXP');
+            const startXP = 250;
+            const endXP = isCorrect ? 260 : 250;
+            const duration = 1000;
+            const startTime = Date.now();
+
+            function updateXP() {
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const currentXP = Math.floor(startXP + (endXP - startXP) * progress);
+                xpElement.textContent = currentXP;
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateXP);
+                }
+            }
+
+            updateXP();
+        }
+
+        // Inicia animação ao carregar
+        window.addEventListener('DOMContentLoaded', () => {
+            if (isCorrect) {
+                animateXP();
+            }
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
+
