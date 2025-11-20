@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard XP Classic - Hackthon Educação Financeira</title>
+    <link rel="stylesheet" href="styles-xp-classic.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <!-- Perfil do Usuário -->
+        <div class="sidebar-profile">
+            <div class="avatar-large">
+                <div class="avatar-circle">JD</div>
+                <div class="avatar-level-badge">3</div>
+            </div>
+            <h3 class="sidebar-username">João Silva</h3>
+            <p class="sidebar-email">joao@example.com</p>
+        </div>
+
+        <!-- XP e Progresso -->
+        <div class="sidebar-xp-section">
+            <div class="sidebar-xp-header">
+                <span class="sidebar-xp-icon">⭐</span>
+                <div>
+                    <div class="sidebar-xp-value" id="sidebarXP">250</div>
+                    <div class="sidebar-xp-label">XP Total</div>
+                </div>
+            </div>
+            <div class="xp-bar-mini">
+                <div class="xp-fill-mini" style="width: 65%;"></div>
+            </div>
+            <small class="sidebar-xp-progress">250 / 400 XP para nível 4</small>
+        </div>
+
+        <!-- Estatísticas Rápidas -->
+        <div class="sidebar-stats">
+            <div class="sidebar-stat-item">
+                <div class="sidebar-stat-icon">📊</div>
+                <div>
+                    <div class="sidebar-stat-value">85%</div>
+                    <div class="sidebar-stat-label">Taxa de Acerto</div>
+                </div>
+            </div>
+            <div class="sidebar-stat-item">
+                <div class="sidebar-stat-icon">🔥</div>
+                <div>
+                    <div class="sidebar-stat-value">7</div>
+                    <div class="sidebar-stat-label">Dias de Sequência</div>
+                </div>
+            </div>
+            <div class="sidebar-stat-item">
+                <div class="sidebar-stat-icon">✅</div>
+                <div>
+                    <div class="sidebar-stat-value">42</div>
+                    <div class="sidebar-stat-label">Perguntas Respondidas</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Missões Diárias -->
+        <div class="sidebar-missions">
+            <h4 class="sidebar-section-title">🎁 Missões</h4>
+            <div class="sidebar-mission-item">
+                <div class="sidebar-mission-progress">
+                    <div class="sidebar-mission-bar" style="width: 60%;"></div>
+                </div>
+                <small>5 perguntas hoje (3/5)</small>
+            </div>
+            <div class="sidebar-mission-item">
+                <div class="sidebar-mission-progress">
+                    <div class="sidebar-mission-bar" style="width: 45%;"></div>
+                </div>
+                <small>20 perguntas semanais (9/20)</small>
+            </div>
+        </div>
+
+        <!-- Configurações -->
+        <div class="sidebar-actions">
+            <button class="sidebar-btn" onclick="openSettings()">
+                <span>⚙️</span> Configurações
+            </button>
+            <button class="sidebar-btn" onclick="openProfile()">
+                <span>👤</span> Meu Perfil
+            </button>
+            <button class="sidebar-btn" onclick="openAchievements()">
+                <span>🏆</span> Conquistas
+            </button>
+        </div>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Header Minimalista -->
+        <header class="main-header">
+            <h1 class="main-title">Aprenda Educação Financeira</h1>
+            <div class="header-actions">
+                <button class="btn-icon btn-secondary" onclick="openShop()" title="Loja">
+                    💎
+                </button>
+                <button class="btn-icon btn-secondary" onclick="openLeaderboard()" title="Ranking">
+                    🏅
+                </button>
+            </div>
+        </header>
+
+        <!-- Mapa Estilo Duolingo -->
+        <div class="learning-map-container">
+            <!-- Sessão 1: Introdução -->
+            <div class="session-group" data-session="introducao">
+                <div class="session-header">
+                    <div class="session-icon">📚</div>
+                    <h2 class="session-title">Introdução à Educação Financeira</h2>
+                    <div class="session-progress">
+                        <span>3/5 fases completadas</span>
+                    </div>
+                </div>
+                <div class="phases-container">
+                    <!-- Fase 1: Conceitos Básicos -->
+                    <div class="phase-node completed" data-phase="conceitos_basicos" onclick="startPhase('introducao', 'conceitos_basicos')">
+                        <div class="phase-circle completed">
+                            <span class="phase-check">✓</span>
+                        </div>
+                        <div class="phase-label">Conceitos Básicos</div>
+                    </div>
+                    <div class="phase-connector completed"></div>
+
+                    <!-- Fase 2: Orçamento Pessoal -->
+                    <div class="phase-node completed" data-phase="orcamento_pessoal" onclick="startPhase('introducao', 'orcamento_pessoal')">
+                        <div class="phase-circle completed">
+                            <span class="phase-check">✓</span>
+                        </div>
+                        <div class="phase-label">Orçamento Pessoal</div>
+                    </div>
+                    <div class="phase-connector completed"></div>
+
+                    <!-- Fase 3: Reserva de Emergência -->
+                    <div class="phase-node completed" data-phase="reserva_emergencia" onclick="startPhase('introducao', 'reserva_emergencia')">
+                        <div class="phase-circle completed">
+                            <span class="phase-check">✓</span>
+                        </div>
+                        <div class="phase-label">Reserva de Emergência</div>
+                    </div>
+                    <div class="phase-connector"></div>
+
+                    <!-- Fase 4: Planejamento Financeiro -->
+                    <div class="phase-node current" data-phase="planejamento_financeiro" onclick="startPhase('introducao', 'planejamento_financeiro')">
+                        <div class="phase-circle current">
+                            <span class="phase-number">4</span>
+                        </div>
+                        <div class="phase-label">Planejamento Financeiro</div>
+                    </div>
+                    <div class="phase-connector"></div>
+
+                    <!-- Fase 5: Metas Financeiras -->
+                    <div class="phase-node locked" data-phase="metas_financeiras">
+                        <div class="phase-circle locked">
+                            <span class="phase-lock">🔒</span>
+                        </div>
+                        <div class="phase-label">Metas Financeiras</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sessão 2: Crédito -->
+            <div class="session-group" data-session="credito">
+                <div class="session-header">
+                    <div class="session-icon">💳</div>
+                    <h2 class="session-title">Crédito Consciente</h2>
+                    <div class="session-progress">
+                        <span>1/4 fases completadas</span>
+                    </div>
+                </div>
+                <div class="phases-container">
+                    <!-- Fase 1: Entendendo o Crédito -->
+                    <div class="phase-node completed" data-phase="entendendo_credito" onclick="startPhase('credito', 'entendendo_credito')">
+                        <div class="phase-circle completed">
+                            <span class="phase-check">✓</span>
+                        </div>
+                        <div class="phase-label">Entendendo o Crédito</div>
+                    </div>
+                    <div class="phase-connector"></div>
+
+                    <!-- Fase 2: Cartão de Crédito -->
+                    <div class="phase-node current" data-phase="cartao_credito" onclick="startPhase('credito', 'cartao_credito')">
+                        <div class="phase-circle current">
+                            <span class="phase-number">2</span>
+                        </div>
+                        <div class="phase-label">Cartão de Crédito</div>
+                    </div>
+                    <div class="phase-connector"></div>
+
+                    <!-- Fase 3: Empréstimos -->
+                    <div class="phase-node locked" data-phase="emprestimos">
+                        <div class="phase-circle locked">
+                            <span class="phase-lock">🔒</span>
+                        </div>
+                        <div class="phase-label">Empréstimos</div>
+                    </div>
+                    <div class="phase-connector"></div>
+
+                    <!-- Fase 4: Score de Crédito -->
+                    <div class="phase-node locked" data-phase="score_credito">
+                        <div class="phase-circle locked">
+                            <span class="phase-lock">🔒</span>
+                        </div>
+                        <div class="phase-label">Score de Crédito</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sessão 3: Investimentos -->
+            <div class="session-group" data-session="investimentos">
+                <div class="session-header">
+                    <div class="session-icon">📈</div>
+                    <h2 class="session-title">Investimentos</h2>
+                    <div class="session-progress">
+                        <span>0/5 fases completadas</span>
+                    </div>
+                </div>
+                <div class="phases-container">
+                    <!-- Fase 1: Introdução aos Investimentos -->
+                    <div class="phase-node available" data-phase="introducao_investimentos" onclick="startPhase('investimentos', 'introducao_investimentos')">
+                        <div class="phase-circle available">
+                            <span class="phase-number">1</span>
+                        </div>
+                        <div class="phase-label">Introdução aos Investimentos</div>
+                    </div>
+                    <div class="phase-connector"></div>
+
+                    <!-- Fase 2: Renda Fixa -->
+                    <div class="phase-node locked" data-phase="renda_fixa">
+                        <div class="phase-circle locked">
+                            <span class="phase-lock">🔒</span>
+                        </div>
+                        <div class="phase-label">Renda Fixa</div>
+                    </div>
+                    <div class="phase-connector"></div>
+
+                    <!-- Fase 3: Renda Variável -->
+                    <div class="phase-node locked" data-phase="renda_variavel">
+                        <div class="phase-circle locked">
+                            <span class="phase-lock">🔒</span>
+                        </div>
+                        <div class="phase-label">Renda Variável</div>
+                    </div>
+                    <div class="phase-connector"></div>
+
+                    <!-- Fase 4: Fundos de Investimento -->
+                    <div class="phase-node locked" data-phase="fundos_investimento">
+                        <div class="phase-circle locked">
+                            <span class="phase-lock">🔒</span>
+                        </div>
+                        <div class="phase-label">Fundos de Investimento</div>
+                    </div>
+                    <div class="phase-connector"></div>
+
+                    <!-- Fase 5: Estratégias Avançadas -->
+                    <div class="phase-node locked" data-phase="estrategias_avancadas">
+                        <div class="phase-circle locked">
+                            <span class="phase-lock">🔒</span>
+                        </div>
+                        <div class="phase-label">Estratégias Avançadas</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sessão 4: Financiamento -->
+            <div class="session-group" data-session="financiamento">
+                <div class="session-header">
+                    <div class="session-icon">🏠</div>
+                    <h2 class="session-title">Financiamento</h2>
+                    <div class="session-progress">
+                        <span>Bloqueado</span>
+                    </div>
+                </div>
+                <div class="phases-container">
+                    <div class="phase-node locked" data-phase="financiamento_imobiliario">
+                        <div class="phase-circle locked">
+                            <span class="phase-lock">🔒</span>
+                        </div>
+                        <div class="phase-label">Financiamento Imobiliário</div>
+                    </div>
+                    <div class="phase-connector"></div>
+                    <div class="phase-node locked" data-phase="financiamento_veicular">
+                        <div class="phase-circle locked">
+                            <span class="phase-lock">🔒</span>
+                        </div>
+                        <div class="phase-label">Financiamento Veicular</div>
+                    </div>
+                    <div class="phase-connector"></div>
+                    <div class="phase-node locked" data-phase="analise_condicoes">
+                        <div class="phase-circle locked">
+                            <span class="phase-lock">🔒</span>
+                        </div>
+                        <div class="phase-label">Análise de Condições</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        function startPhase(session, phase) {
+            console.log(`Iniciando fase ${phase} da sessão ${session}`);
+            window.location.href = `question-v2.html?session=${session}&phase=${phase}`;
+        }
+
+        function openSettings() {
+            alert('Abrindo configurações...');
+        }
+
+        function openProfile() {
+            alert('Abrindo perfil...');
+        }
+
+        function openAchievements() {
+            alert('Abrindo conquistas...');
+        }
+
+        function openShop() {
+            alert('Abrindo loja...');
+        }
+
+        function openLeaderboard() {
+            alert('Abrindo ranking...');
+        }
+    </script>
+</body>
+</html>
+
