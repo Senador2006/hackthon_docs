@@ -515,6 +515,1380 @@
       "explanation": "Quitação antecipada é pagar o financiamento antes do prazo. Benefícios: economiza juros, libera renda. Cuidados: verificar se há multa ou desconto, calcular se vale a pena (considerando investimentos alternativos), verificar impacto no score de crédito.",
       "xp_value": 22,
       "keywords": ["quitação", "juros", "multa", "desconto", "score"]
+    },
+    {
+      "id": "q035",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "conceitos_basicos",
+      "difficulty": "iniciante",
+      "context": "Você está aprendendo sobre juros compostos.",
+      "question": "O que são juros compostos?",
+      "options": [
+        "Juros calculados apenas sobre o valor inicial",
+        "Juros calculados sobre o valor inicial mais os juros acumulados",
+        "Juros que não mudam com o tempo",
+        "Juros que só existem em empréstimos"
+      ],
+      "correct_answer": 1,
+      "explanation": "Juros compostos são calculados sobre o capital inicial mais os juros já acumulados, fazendo o dinheiro crescer exponencialmente ao longo do tempo.",
+      "xp_value": 12
+    },
+    {
+      "id": "q036",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "orcamento_pessoal",
+      "difficulty": "basico",
+      "context": "Você está organizando suas finanças mensais.",
+      "question": "Qual é a regra dos 50/30/20 para orçamento pessoal?",
+      "options": [
+        "50% necessidades, 30% desejos, 20% poupança",
+        "50% poupança, 30% desejos, 20% necessidades",
+        "50% desejos, 30% necessidades, 20% poupança",
+        "Não existe essa regra"
+      ],
+      "correct_answer": 0,
+      "explanation": "A regra 50/30/20 sugere destinar 50% da renda para necessidades essenciais, 30% para desejos e 20% para poupança e investimentos.",
+      "xp_value": 15
+    },
+    {
+      "id": "q037",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "reserva_emergencia",
+      "difficulty": "medio",
+      "context": "Você está planejando como construir sua reserva de emergência.",
+      "question": "Descreva um plano prático para construir uma reserva de emergência de 6 meses de despesas em um ano.",
+      "explanation": "Plano: 1) Calcular despesas mensais totais, 2) Multiplicar por 6 para obter meta, 3) Dividir por 12 meses, 4) Separar esse valor mensalmente, 5) Automatizar transferência para conta separada, 6) Revisar e ajustar conforme necessário.",
+      "xp_value": 20,
+      "keywords": ["calcular", "meta", "separar", "automatizar", "revisar"]
+    },
+    {
+      "id": "q038",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "planejamento_financeiro",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre inflação.",
+      "question": "O que é inflação?",
+      "options": [
+        "Aumento geral dos preços ao longo do tempo",
+        "Diminuição do poder de compra",
+        "Aumento do salário",
+        "Diminuição dos juros"
+      ],
+      "correct_answer": 0,
+      "explanation": "Inflação é o aumento geral e contínuo dos preços de bens e serviços, reduzindo o poder de compra do dinheiro ao longo do tempo.",
+      "xp_value": 12
+    },
+    {
+      "id": "q039",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "cartao_credito",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre anuidade de cartão de crédito.",
+      "question": "O que é anuidade de cartão de crédito?",
+      "options": [
+        "Taxa mensal obrigatória",
+        "Taxa anual cobrada pelo uso do cartão",
+        "Desconto anual",
+        "Limite adicional"
+      ],
+      "correct_answer": 1,
+      "explanation": "Anuidade é uma taxa anual cobrada pelo banco pela manutenção e uso do cartão de crédito. Muitos bancos oferecem isenção mediante uso mínimo.",
+      "xp_value": 12
+    },
+    {
+      "id": "q040",
+      "type": "discursiva",
+      "session": "credito",
+      "phase": "entendendo_credito",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre diferentes modalidades de crédito.",
+      "question": "Explique a diferença entre cheque especial, crédito consignado e crédito pessoal.",
+      "explanation": "Cheque especial: crédito rotativo com juros altíssimos, uso imediato. Crédito consignado: desconto direto na folha, juros menores, mas compromete renda. Crédito pessoal: juros intermediários, sem garantia, mais flexível.",
+      "xp_value": 20,
+      "keywords": ["cheque", "consignado", "pessoal", "juros", "garantia"]
+    },
+    {
+      "id": "q041",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "score_credito",
+      "difficulty": "basico",
+      "context": "Você quer entender como funciona o score de crédito.",
+      "question": "O que é score de crédito?",
+      "options": [
+        "Uma nota que avalia sua capacidade de pagamento",
+        "O valor do seu salário",
+        "A quantidade de cartões que você tem",
+        "O limite total do seu crédito"
+      ],
+      "correct_answer": 0,
+      "explanation": "Score de crédito é uma pontuação que avalia sua capacidade e histórico de pagamento, usada por instituições financeiras para decidir sobre empréstimos e limites.",
+      "xp_value": 15
+    },
+    {
+      "id": "q042",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_fixa",
+      "difficulty": "basico",
+      "context": "Você está conhecendo diferentes tipos de investimentos.",
+      "question": "O que é Tesouro Direto?",
+      "options": [
+        "Um banco digital",
+        "Programa do governo para compra de títulos públicos",
+        "Um tipo de ação",
+        "Um fundo de investimento"
+      ],
+      "correct_answer": 1,
+      "explanation": "Tesouro Direto é o programa do Tesouro Nacional que permite pessoas físicas comprarem títulos públicos de forma simples e segura.",
+      "xp_value": 15
+    },
+    {
+      "id": "q043",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "introducao_investimentos",
+      "difficulty": "basico",
+      "context": "Você está começando a investir e quer entender os conceitos básicos.",
+      "question": "Explique o que significa liquidez em investimentos.",
+      "explanation": "Liquidez é a facilidade de converter um investimento em dinheiro sem perder valor. Alta liquidez = resgate rápido (poupança). Baixa liquidez = resgate com prazo ou perda (imóveis).",
+      "xp_value": 15,
+      "keywords": ["liquidez", "converter", "dinheiro", "resgate", "prazo"]
+    },
+    {
+      "id": "q044",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_fixa",
+      "difficulty": "medio",
+      "context": "Você está comparando investimentos de renda fixa.",
+      "question": "O que significa CDI?",
+      "options": [
+        "Certificado de Depósito Interbancário",
+        "Conta de Depósito Individual",
+        "Certificado de Depósito Imobiliário",
+        "Conta Digital Interbancária"
+      ],
+      "correct_answer": 0,
+      "explanation": "CDI é a taxa de juros que os bancos usam para emprestar dinheiro entre si. É usada como referência para muitos investimentos de renda fixa.",
+      "xp_value": 18
+    },
+    {
+      "id": "q045",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_variavel",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre ações.",
+      "question": "O que é uma ação?",
+      "options": [
+        "Um empréstimo para empresas",
+        "Uma pequena parte do capital de uma empresa",
+        "Um tipo de moeda",
+        "Um seguro"
+      ],
+      "correct_answer": 1,
+      "explanation": "Ação é uma pequena parte do capital de uma empresa. Ao comprar ações, você se torna sócio da empresa e pode receber dividendos.",
+      "xp_value": 18
+    },
+    {
+      "id": "q046",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "fundos_investimento",
+      "difficulty": "avancado",
+      "context": "Você está analisando diferentes tipos de fundos de investimento.",
+      "question": "Explique a diferença entre fundo de renda fixa, fundo de ações e fundo multimercado.",
+      "explanation": "Fundo de renda fixa: investe principalmente em títulos de dívida, menor risco. Fundo de ações: investe em ações, maior risco e potencial retorno. Fundo multimercado: diversifica entre várias classes, risco moderado.",
+      "xp_value": 22,
+      "keywords": ["renda fixa", "ações", "multimercado", "risco", "diversificação"]
+    },
+    {
+      "id": "q047",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "medio",
+      "context": "Você está pesquisando sobre financiamento imobiliário.",
+      "question": "O que é FGTS e como ele pode ser usado no financiamento?",
+      "options": [
+        "Fundo que não pode ser usado em financiamento",
+        "Fundo que pode ser usado como entrada ou amortização",
+        "Um tipo de seguro",
+        "Apenas um desconto na taxa"
+      ],
+      "correct_answer": 1,
+      "explanation": "FGTS pode ser usado como entrada no financiamento ou para amortizar o saldo devedor, reduzindo o valor total a pagar e as parcelas.",
+      "xp_value": 18
+    },
+    {
+      "id": "q048",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "conceitos_basicos",
+      "difficulty": "iniciante",
+      "context": "Você está aprendendo sobre dívidas.",
+      "question": "Qual é a melhor estratégia para sair de dívidas?",
+      "options": [
+        "Pagar todas as dívidas ao mesmo tempo",
+        "Priorizar dívidas com maiores juros (método avalanche) ou menores valores (método bola de neve)",
+        "Ignorar as dívidas",
+        "Contrair mais dívidas para pagar as antigas"
+      ],
+      "correct_answer": 1,
+      "explanation": "As melhores estratégias são: método avalanche (pagar primeiro as dívidas com maiores juros) ou método bola de neve (pagar primeiro as menores para ganhar motivação).",
+      "xp_value": 15
+    },
+    {
+      "id": "q049",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "orcamento_pessoal",
+      "difficulty": "medio",
+      "context": "Você está criando seu primeiro orçamento detalhado.",
+      "question": "Descreva como você categorizaria suas despesas em um orçamento pessoal e por que essa categorização é importante.",
+      "explanation": "Categorias comuns: Moradia, Alimentação, Transporte, Saúde, Educação, Lazer, Poupança/Investimentos. A categorização ajuda a identificar onde o dinheiro está indo, facilitando controle e ajustes.",
+      "xp_value": 18,
+      "keywords": ["categorias", "despesas", "controle", "identificar", "ajustes"]
+    },
+    {
+      "id": "q050",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "cartao_credito",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre programas de recompensa.",
+      "question": "O que são programas de pontos e milhas?",
+      "options": [
+        "Sistema que dá dinheiro de volta",
+        "Sistema que acumula pontos/milhas por compras que podem ser trocados por benefícios",
+        "Desconto imediato nas compras",
+        "Juros reduzidos"
+      ],
+      "correct_answer": 1,
+      "explanation": "Programas de pontos e milhas acumulam créditos por compras realizadas, que podem ser trocados por viagens, produtos ou descontos, mas só valem a pena se você paga a fatura integralmente.",
+      "xp_value": 18
+    },
+    {
+      "id": "q051",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_fixa",
+      "difficulty": "avancado",
+      "context": "Você está aprendendo sobre indexadores de investimentos.",
+      "question": "O que significa investimento atrelado ao IPCA?",
+      "options": [
+        "Investimento que rende acima da inflação",
+        "Investimento que acompanha a inflação mais uma taxa",
+        "Investimento que não rende nada",
+        "Investimento de alto risco"
+      ],
+      "correct_answer": 1,
+      "explanation": "Investimentos atrelados ao IPCA rendem a inflação (IPCA) mais uma taxa prefixada, protegendo o poder de compra do dinheiro.",
+      "xp_value": 20
+    },
+    {
+      "id": "q052",
+      "type": "discursiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "medio",
+      "context": "Você está comparando diferentes tipos de financiamento imobiliário.",
+      "question": "Explique a diferença entre financiamento SAC (Sistema de Amortização Constante) e Price (Sistema de Prestação Fixa).",
+      "explanation": "SAC: parcelas decrescem ao longo do tempo, amortização constante. Price: prestações fixas, amortização cresce ao longo do tempo. SAC paga menos juros no total, mas começa com parcelas maiores.",
+      "xp_value": 22,
+      "keywords": ["SAC", "Price", "amortização", "parcelas", "juros"]
+    },
+    {
+      "id": "q053",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "metas_financeiras",
+      "difficulty": "basico",
+      "context": "Você está estabelecendo suas primeiras metas financeiras.",
+      "question": "Por que é importante ter metas financeiras específicas?",
+      "options": [
+        "Não é importante",
+        "Metas específicas são mais fáceis de alcançar e medir",
+        "Metas genéricas são melhores",
+        "Metas não fazem diferença"
+      ],
+      "correct_answer": 1,
+      "explanation": "Metas específicas (com valor, prazo e ação) são mais fáceis de alcançar porque você sabe exatamente o que precisa fazer e pode medir o progresso.",
+      "xp_value": 12
+    },
+    {
+      "id": "q054",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "emprestimos",
+      "difficulty": "avancado",
+      "context": "Você está analisando opções de consolidação de dívidas.",
+      "question": "O que é consolidação de dívidas?",
+      "options": [
+        "Cancelar todas as dívidas",
+        "Unificar várias dívidas em uma só com condições melhores",
+        "Aumentar o número de dívidas",
+        "Ignorar as dívidas"
+      ],
+      "correct_answer": 1,
+      "explanation": "Consolidação de dívidas é unificar várias dívidas em uma única, geralmente com juros menores e prazo maior, facilitando o pagamento.",
+      "xp_value": 20
+    },
+    {
+      "id": "q055",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "estrategias_avancadas",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre perfil de investidor.",
+      "question": "Descreva as características de um investidor conservador, moderado e arrojado.",
+      "explanation": "Conservador: prioriza segurança, aceita menor retorno, prefere renda fixa. Moderado: busca equilíbrio entre risco e retorno, diversifica. Arrojado: aceita maior risco por maior retorno, investe mais em renda variável.",
+      "xp_value": 20,
+      "keywords": ["conservador", "moderado", "arrojado", "risco", "retorno"]
+    },
+    {
+      "id": "q056",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_veicular",
+      "difficulty": "basico",
+      "context": "Você está considerando comprar um veículo.",
+      "question": "Qual é a melhor estratégia financeira ao comprar um veículo?",
+      "options": [
+        "Sempre financiar o valor total",
+        "Dar uma entrada significativa e financiar o restante, ou comprar à vista se possível",
+        "Não dar entrada nunca",
+        "Comprar sempre o mais caro possível"
+      ],
+      "correct_answer": 1,
+      "explanation": "A melhor estratégia é dar uma entrada significativa (reduz juros) ou comprar à vista (evita juros). Financiar o mínimo possível reduz o custo total.",
+      "xp_value": 15
+    },
+    {
+      "id": "q057",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "reserva_emergencia",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre onde guardar dinheiro.",
+      "question": "Por que não é recomendado investir a reserva de emergência em ações?",
+      "options": [
+        "Ações sempre perdem valor",
+        "Ações podem perder valor quando você mais precisa do dinheiro",
+        "Ações são ilegais",
+        "Ações não rendem nada"
+      ],
+      "correct_answer": 1,
+      "explanation": "Ações são voláteis e podem estar desvalorizadas exatamente quando você precisa do dinheiro da reserva de emergência, por isso não são adequadas para esse fim.",
+      "xp_value": 15
+    },
+    {
+      "id": "q058",
+      "type": "discursiva",
+      "session": "credito",
+      "phase": "score_credito",
+      "difficulty": "medio",
+      "context": "Você quer melhorar seu relacionamento com o crédito.",
+      "question": "Explique como o histórico de pagamento afeta seu score de crédito e o que fazer para mantê-lo positivo.",
+      "explanation": "Histórico de pagamento é um dos fatores mais importantes. Para mantê-lo positivo: pagar todas as contas em dia, não atrasar nenhum pagamento, negociar antes de entrar em inadimplência, manter contas antigas em bom estado.",
+      "xp_value": 20,
+      "keywords": ["histórico", "pagamento", "atrasos", "negociar", "inadimplência"]
+    },
+    {
+      "id": "q059",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_variavel",
+      "difficulty": "avancado",
+      "context": "Você está aprendendo sobre análise de ações.",
+      "question": "O que significa P/L (Preço sobre Lucro) em ações?",
+      "options": [
+        "O preço da ação",
+        "Razão entre preço da ação e lucro por ação, indicando se está cara ou barata",
+        "O lucro total da empresa",
+        "A quantidade de ações"
+      ],
+      "correct_answer": 1,
+      "explanation": "P/L é a razão entre o preço da ação e o lucro por ação. Um P/L baixo pode indicar ação barata, mas deve ser analisado junto com outros indicadores.",
+      "xp_value": 22
+    },
+    {
+      "id": "q060",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "analise_condicoes",
+      "difficulty": "medio",
+      "context": "Você está analisando um contrato de financiamento.",
+      "question": "O que é IOF (Imposto sobre Operações Financeiras)?",
+      "options": [
+        "Imposto cobrado sobre operações financeiras como empréstimos e investimentos",
+        "Um desconto",
+        "Uma taxa de juros",
+        "Um seguro"
+      ],
+      "correct_answer": 0,
+      "explanation": "IOF é um imposto federal cobrado sobre operações de crédito, câmbio e seguros. Em empréstimos, é cobrado sobre o valor total e reduz conforme o prazo.",
+      "xp_value": 18
+    },
+    {
+      "id": "q061",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "planejamento_financeiro",
+      "difficulty": "avancado",
+      "context": "Você está criando um planejamento financeiro de longo prazo.",
+      "question": "Explique a importância de separar objetivos financeiros de curto, médio e longo prazo e como isso afeta suas decisões de investimento.",
+      "explanation": "Separar objetivos ajuda a escolher investimentos adequados: curto prazo (até 1 ano) = alta liquidez e baixo risco; médio prazo (1-5 anos) = equilíbrio; longo prazo (5+ anos) = pode assumir mais risco por maior retorno potencial.",
+      "xp_value": 22,
+      "keywords": ["objetivos", "prazo", "liquidez", "risco", "investimento"]
+    },
+    {
+      "id": "q062",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "cartao_credito",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre limite de crédito.",
+      "question": "Qual é a melhor prática em relação ao uso do limite do cartão?",
+      "options": [
+        "Usar 100% do limite sempre",
+        "Manter uso abaixo de 30% do limite",
+        "Não usar nunca",
+        "Usar exatamente 50%"
+      ],
+      "correct_answer": 1,
+      "explanation": "Manter o uso abaixo de 30% do limite mostra responsabilidade e ajuda a melhorar o score de crédito, além de evitar endividamento excessivo.",
+      "xp_value": 15
+    },
+    {
+      "id": "q063",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_fixa",
+      "difficulty": "medio",
+      "context": "Você está comparando investimentos.",
+      "question": "O que é FGC (Fundo Garantidor de Créditos)?",
+      "options": [
+        "Um tipo de investimento",
+        "Fundo que protege investimentos até R$ 250 mil por CPF por instituição",
+        "Uma taxa de juros",
+        "Um banco"
+      ],
+      "correct_answer": 1,
+      "explanation": "FGC é um fundo que protege investimentos em caso de falência de instituições financeiras, garantindo até R$ 250 mil por CPF por instituição.",
+      "xp_value": 18
+    },
+    {
+      "id": "q064",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "introducao_investimentos",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre risco e retorno.",
+      "question": "Explique a relação entre risco e retorno nos investimentos e dê exemplos.",
+      "explanation": "Geralmente, maior risco oferece maior potencial de retorno. Exemplos: Poupança (baixo risco, baixo retorno), CDB (risco médio, retorno médio), Ações (alto risco, alto retorno potencial). Mas não é garantia - pode perder também.",
+      "xp_value": 20,
+      "keywords": ["risco", "retorno", "potencial", "garantia", "perda"]
+    },
+    {
+      "id": "q065",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "basico",
+      "context": "Você está pesquisando sobre financiamento de imóveis.",
+      "question": "O que é entrada no financiamento imobiliário?",
+      "options": [
+        "O valor total do imóvel",
+        "Valor pago à vista antes de financiar o restante",
+        "A primeira parcela",
+        "Um desconto"
+      ],
+      "correct_answer": 1,
+      "explanation": "Entrada é o valor pago à vista antes de financiar o restante. Quanto maior a entrada, menor o valor financiado e, geralmente, melhores as condições.",
+      "xp_value": 12
+    },
+    {
+      "id": "q066",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "conceitos_basicos",
+      "difficulty": "iniciante",
+      "context": "Você está aprendendo sobre controle financeiro.",
+      "question": "Por que é importante anotar todos os gastos?",
+      "options": [
+        "Não é importante",
+        "Para saber exatamente para onde o dinheiro está indo e identificar onde economizar",
+        "Para gastar mais",
+        "Para impressionar outras pessoas"
+      ],
+      "correct_answer": 1,
+      "explanation": "Anotar gastos permite identificar padrões, descobrir onde o dinheiro está sendo gasto e encontrar oportunidades de economia.",
+      "xp_value": 10
+    },
+    {
+      "id": "q067",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "metas_financeiras",
+      "difficulty": "basico",
+      "context": "Você está definindo suas metas financeiras.",
+      "question": "Descreva como você estabeleceria uma meta financeira usando o método SMART.",
+      "explanation": "SMART: Específica (ex: economizar R$ 5.000), Mensurável (pode medir progresso), Atingível (realista para sua situação), Relevante (importante para você), Temporal (prazo definido, ex: em 12 meses).",
+      "xp_value": 18,
+      "keywords": ["específica", "mensurável", "atingível", "relevante", "temporal"]
+    },
+    {
+      "id": "q068",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "entendendo_credito",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre diferentes formas de crédito.",
+      "question": "O que é crédito consignado?",
+      "options": [
+        "Crédito com juros altos",
+        "Crédito com desconto direto na folha de pagamento",
+        "Crédito sem juros",
+        "Crédito apenas para empresas"
+      ],
+      "correct_answer": 1,
+      "explanation": "Crédito consignado tem desconto direto na folha de pagamento ou benefício, oferecendo juros menores por ter garantia, mas comprometendo parte da renda.",
+      "xp_value": 18
+    },
+    {
+      "id": "q069",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_fixa",
+      "difficulty": "avancado",
+      "context": "Você está aprendendo sobre diferentes tipos de CDB.",
+      "question": "Qual a diferença entre CDB pré-fixado, pós-fixado e híbrido?",
+      "options": [
+        "Não há diferença",
+        "Pré: taxa fixa, Pós: atrelado a índice (CDI), Híbrido: IPCA + taxa",
+        "Todos são iguais",
+        "Apenas nomes diferentes"
+      ],
+      "correct_answer": 1,
+      "explanation": "CDB pré-fixado tem taxa fixa conhecida. Pós-fixado rende percentual do CDI. Híbrido rende IPCA mais taxa fixa, protegendo da inflação.",
+      "xp_value": 20
+    },
+    {
+      "id": "q070",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "renda_variavel",
+      "difficulty": "medio",
+      "context": "Você está considerando investir em ações pela primeira vez.",
+      "question": "Explique o que é uma carteira de ações e por que é importante diversificar.",
+      "explanation": "Carteira é o conjunto de ações que você possui. Diversificar (ter ações de diferentes empresas e setores) reduz risco - se uma empresa/setor vai mal, outras podem compensar.",
+      "xp_value": 20,
+      "keywords": ["carteira", "ações", "diversificar", "risco", "setores"]
+    },
+    {
+      "id": "q071",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "medio",
+      "context": "Você está analisando condições de financiamento.",
+      "question": "O que significa taxa de juros efetiva?",
+      "options": [
+        "Apenas a taxa anunciada",
+        "Taxa real que você paga incluindo todos os custos",
+        "Um desconto",
+        "A taxa de inflação"
+      ],
+      "correct_answer": 1,
+      "explanation": "Taxa efetiva é a taxa real que você paga, considerando todos os custos (juros, taxas, seguros), diferente da taxa nominal anunciada.",
+      "xp_value": 18
+    },
+    {
+      "id": "q072",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "orcamento_pessoal",
+      "difficulty": "medio",
+      "context": "Você está organizando seu orçamento.",
+      "question": "O que é uma despesa fixa?",
+      "options": [
+        "Despesa que nunca muda",
+        "Despesa com valor constante todo mês (ex: aluguel, plano de celular)",
+        "Despesa que só acontece uma vez",
+        "Despesa opcional"
+      ],
+      "correct_answer": 1,
+      "explanation": "Despesa fixa tem valor constante mensalmente, como aluguel, planos de assinatura, financiamentos. Facilita o planejamento financeiro.",
+      "xp_value": 12
+    },
+    {
+      "id": "q073",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "reserva_emergencia",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre quando usar a reserva de emergência.",
+      "question": "Explique em quais situações é apropriado usar a reserva de emergência e em quais não é.",
+      "explanation": "Apropriado: desemprego, doença grave, reparo urgente essencial (ex: telhado vazando), emergência familiar real. Não apropriado: compras por impulso, viagens planejadas, upgrades desnecessários, investimentos.",
+      "xp_value": 18,
+      "keywords": ["emergência", "desemprego", "urgente", "essencial", "impulso"]
+    },
+    {
+      "id": "q074",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "score_credito",
+      "difficulty": "medio",
+      "context": "Você quer entender como melhorar seu relacionamento com crédito.",
+      "question": "O que acontece quando você consulta seu score de crédito?",
+      "options": [
+        "O score diminui automaticamente",
+        "Consulta não afeta o score, mas muitas consultas de empréstimo podem indicar risco",
+        "O score aumenta",
+        "Nada acontece"
+      ],
+      "correct_answer": 1,
+      "explanation": "Consultar seu próprio score não afeta negativamente, mas muitas consultas de instituições financeiras (ao pedir empréstimos) podem indicar risco e afetar o score.",
+      "xp_value": 18
+    },
+    {
+      "id": "q075",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "fundos_investimento",
+      "difficulty": "basico",
+      "context": "Você está conhecendo fundos de investimento.",
+      "question": "O que é taxa de administração em fundos?",
+      "options": [
+        "Taxa única de entrada",
+        "Taxa anual cobrada sobre o valor investido para gestão do fundo",
+        "Taxa de saída",
+        "Um desconto"
+      ],
+      "correct_answer": 1,
+      "explanation": "Taxa de administração é cobrada anualmente sobre o valor investido para pagar a gestão profissional do fundo. Reduz o retorno líquido.",
+      "xp_value": 15
+    },
+    {
+      "id": "q076",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "estrategias_avancadas",
+      "difficulty": "avancado",
+      "context": "Você está montando uma estratégia de investimento de longo prazo.",
+      "question": "Explique o conceito de juros compostos e como ele pode trabalhar a seu favor nos investimentos.",
+      "explanation": "Juros compostos são juros sobre juros - você ganha juros sobre o capital inicial mais os juros já acumulados. Com o tempo, isso cria crescimento exponencial. Quanto mais tempo e maior a taxa, maior o efeito. 'Tempo é dinheiro'.",
+      "xp_value": 22,
+      "keywords": ["juros", "compostos", "crescimento", "tempo", "exponencial"]
+    },
+    {
+      "id": "q077",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_veicular",
+      "difficulty": "medio",
+      "context": "Você está analisando se deve financiar um veículo.",
+      "question": "Qual é a principal consideração ao decidir financiar um veículo?",
+      "options": [
+        "Apenas o valor da parcela",
+        "Custo total (juros + valor do veículo), capacidade de pagamento e necessidade real",
+        "Apenas a taxa de juros",
+        "Apenas a marca do veículo"
+      ],
+      "correct_answer": 1,
+      "explanation": "Deve considerar o custo total do financiamento, sua capacidade real de pagar as parcelas sem comprometer outras necessidades, e se realmente precisa do veículo agora.",
+      "xp_value": 18
+    },
+    {
+      "id": "q078",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "planejamento_financeiro",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre planejamento.",
+      "question": "Com que frequência você deve revisar seu planejamento financeiro?",
+      "options": [
+        "Nunca",
+        "Pelo menos mensalmente, ajustando conforme mudanças na vida",
+        "Apenas uma vez por ano",
+        "Apenas quando tiver problemas"
+      ],
+      "correct_answer": 1,
+      "explanation": "Revisar mensalmente permite ajustar o planejamento conforme mudanças na renda, despesas, objetivos e situação de vida, mantendo-o sempre atualizado.",
+      "xp_value": 12
+    },
+    {
+      "id": "q079",
+      "type": "discursiva",
+      "session": "credito",
+      "phase": "emprestimos",
+      "difficulty": "medio",
+      "context": "Você está considerando fazer um empréstimo.",
+      "question": "Descreva cinco perguntas que você deve fazer a si mesmo antes de contrair um empréstimo.",
+      "explanation": "1) Realmente preciso disso agora? 2) Tenho capacidade de pagar as parcelas? 3) Qual o custo total (CET)? 4) Existem alternativas melhores? 5) Isso vai me ajudar ou me endividar mais?",
+      "xp_value": 20,
+      "keywords": ["necessidade", "capacidade", "custo", "alternativas", "endividamento"]
+    },
+    {
+      "id": "q080",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_fixa",
+      "difficulty": "medio",
+      "context": "Você está comparando investimentos de renda fixa.",
+      "question": "O que significa Selic?",
+      "options": [
+        "Um tipo de investimento",
+        "Taxa básica de juros da economia brasileira, usada como referência",
+        "Um banco",
+        "Uma moeda"
+      ],
+      "correct_answer": 1,
+      "explanation": "Selic é a taxa básica de juros da economia brasileira, definida pelo Banco Central. Muitos investimentos são atrelados a ela.",
+      "xp_value": 18
+    },
+    {
+      "id": "q081",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "analise_condicoes",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre financiamentos.",
+      "question": "O que é amortização?",
+      "options": [
+        "Aumento do valor da dívida",
+        "Redução do valor da dívida com pagamento antecipado",
+        "A taxa de juros",
+        "O valor da parcela"
+      ],
+      "correct_answer": 1,
+      "explanation": "Amortização é a redução do saldo devedor através de pagamentos. Amortizações antecipadas reduzem o valor total a pagar e podem diminuir as parcelas.",
+      "xp_value": 15
+    },
+    {
+      "id": "q082",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "conceitos_basicos",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre diferentes tipos de juros.",
+      "question": "Explique a diferença entre juros simples e juros compostos com exemplos práticos.",
+      "explanation": "Juros simples: calculados apenas sobre o capital inicial (ex: R$ 1000 a 10% ao ano = R$ 100 de juros por ano). Juros compostos: calculados sobre capital + juros acumulados (ex: R$ 1000 a 10% = R$ 1100 no 1º ano, R$ 1210 no 2º ano).",
+      "xp_value": 20,
+      "keywords": ["simples", "compostos", "capital", "acumulado", "crescimento"]
+    },
+    {
+      "id": "q083",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "cartao_credito",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre segurança no uso do cartão.",
+      "question": "O que fazer se seu cartão de crédito for clonado ou usado fraudulentamente?",
+      "options": [
+        "Ignorar",
+        "Bloquear imediatamente, entrar em contato com o banco e contestar as compras",
+        "Continuar usando normalmente",
+        "Esperar o banco resolver sozinho"
+      ],
+      "correct_answer": 1,
+      "explanation": "Deve bloquear o cartão imediatamente, entrar em contato com o banco para contestar as transações fraudulentas e seguir o procedimento de segurança. Geralmente o banco resolve e você não paga.",
+      "xp_value": 18
+    },
+    {
+      "id": "q084",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_variavel",
+      "difficulty": "avancado",
+      "context": "Você está aprendendo sobre análise de investimentos.",
+      "question": "O que significa volatilidade em investimentos?",
+      "options": [
+        "Garantia de retorno",
+        "Variação de preços ao longo do tempo (quanto mais volátil, mais oscila)",
+        "Taxa fixa",
+        "Liquidez"
+      ],
+      "correct_answer": 1,
+      "explanation": "Volatilidade é a medida de variação de preços. Alta volatilidade = preços oscilam muito (ações). Baixa volatilidade = preços mais estáveis (renda fixa).",
+      "xp_value": 20
+    },
+    {
+      "id": "q085",
+      "type": "discursiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "avancado",
+      "context": "Você está planejando financiar um imóvel.",
+      "question": "Explique o que é avaliação do imóvel e por que é importante no financiamento.",
+      "explanation": "Avaliação é a análise técnica que determina o valor de mercado do imóvel. É importante porque: 1) Define o valor máximo de financiamento, 2) Garante que o imóvel vale o que está sendo pago, 3) Protege tanto comprador quanto banco.",
+      "xp_value": 20,
+      "keywords": ["avaliação", "valor", "mercado", "financiamento", "proteção"]
+    },
+    {
+      "id": "q086",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "orcamento_pessoal",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre despesas variáveis.",
+      "question": "O que é uma despesa variável?",
+      "options": [
+        "Despesa que nunca muda",
+        "Despesa que varia de mês para mês (ex: alimentação, lazer)",
+        "Despesa que só acontece uma vez",
+        "Despesa fixa"
+      ],
+      "correct_answer": 1,
+      "explanation": "Despesa variável muda de valor mensalmente, como gastos com alimentação, lazer, transporte. É mais difícil de controlar, mas oferece mais oportunidades de economia.",
+      "xp_value": 12
+    },
+    {
+      "id": "q087",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "entendendo_credito",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre uso responsável do crédito.",
+      "question": "Qual é a porcentagem máxima recomendada da renda para comprometer com dívidas?",
+      "options": [
+        "50%",
+        "30%",
+        "80%",
+        "100%"
+      ],
+      "correct_answer": 1,
+      "explanation": "Recomenda-se comprometer no máximo 30% da renda com dívidas e financiamentos, deixando 70% para despesas essenciais, poupança e investimentos.",
+      "xp_value": 15
+    },
+    {
+      "id": "q088",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "introducao_investimentos",
+      "difficulty": "basico",
+      "context": "Você está começando a investir.",
+      "question": "Explique por que é importante começar a investir mesmo com pouco dinheiro.",
+      "explanation": "Começar com pouco ensina disciplina, cria hábito de investir, permite aprender na prática, e com juros compostos, mesmo pequenos valores crescem significativamente ao longo do tempo. 'O melhor momento para começar foi ontem, o segundo melhor é hoje'.",
+      "xp_value": 18,
+      "keywords": ["disciplina", "hábito", "aprender", "juros", "crescimento"]
+    },
+    {
+      "id": "q089",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_veicular",
+      "difficulty": "avancado",
+      "context": "Você está analisando o custo real de um veículo financiado.",
+      "question": "Ao financiar um veículo de R$ 50.000 com entrada de R$ 10.000, qual valor você realmente pagará?",
+      "options": [
+        "R$ 50.000",
+        "R$ 40.000 mais juros e taxas (pode chegar a R$ 60.000 ou mais)",
+        "Apenas R$ 40.000",
+        "R$ 10.000"
+      ],
+      "correct_answer": 1,
+      "explanation": "Você pagará os R$ 40.000 financiados mais todos os juros e taxas ao longo do prazo. Com juros altos de financiamento veicular, o valor total pode ser muito maior que o valor do veículo.",
+      "xp_value": 20
+    },
+    {
+      "id": "q090",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "metas_financeiras",
+      "difficulty": "medio",
+      "context": "Você está estabelecendo metas de economia.",
+      "question": "Qual é a melhor estratégia para alcançar uma meta de economia?",
+      "options": [
+        "Esperar sobrar dinheiro no final do mês",
+        "Separar o valor da meta logo no início do mês (pagar a si mesmo primeiro)",
+        "Economizar apenas quando sobrar",
+        "Não estabelecer metas"
+      ],
+      "correct_answer": 1,
+      "explanation": "A melhor estratégia é 'pagar a si mesmo primeiro' - separar o valor da meta no início do mês, antes de gastar com outras coisas. Isso garante que a economia aconteça.",
+      "xp_value": 15
+    },
+    {
+      "id": "q091",
+      "type": "discursiva",
+      "session": "credito",
+      "phase": "cartao_credito",
+      "difficulty": "avancado",
+      "context": "Você está aprendendo estratégias avançadas de uso do cartão.",
+      "question": "Explique como usar o cartão de crédito de forma estratégica para maximizar benefícios sem se endividar.",
+      "explanation": "Estratégias: 1) Pagar fatura integral sempre, 2) Usar para ganhar pontos/milhas, 3) Aproveitar promoções e cashback, 4) Manter uso abaixo de 30% do limite, 5) Nunca usar para cobrir despesas que não pode pagar, 6) Controlar gastos como se fosse dinheiro à vista.",
+      "xp_value": 22,
+      "keywords": ["fatura", "pontos", "limite", "controle", "estratégia"]
+    },
+    {
+      "id": "q092",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_fixa",
+      "difficulty": "basico",
+      "context": "Você está conhecendo a poupança.",
+      "question": "Como funciona a rentabilidade da poupança?",
+      "options": [
+        "Rende sempre 0,5% ao mês",
+        "Rende 0,5% ao mês + TR (Taxa Referencial), mas apenas quando Selic está acima de 8,5%",
+        "Rende 1% ao mês sempre",
+        "Não rende nada"
+      ],
+      "correct_answer": 1,
+      "explanation": "Poupança rende 0,5% ao mês + TR. Quando Selic está acima de 8,5%, rende 0,5% + TR. Quando Selic está 8,5% ou menos, rende 70% da Selic + TR.",
+      "xp_value": 15
+    },
+    {
+      "id": "q093",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre diferentes sistemas de amortização.",
+      "question": "No sistema SAC, o que acontece com as parcelas ao longo do tempo?",
+      "options": [
+        "Ficam constantes",
+        "Diminuem progressivamente",
+        "Aumentam progressivamente",
+        "Variam aleatoriamente"
+      ],
+      "correct_answer": 1,
+      "explanation": "No SAC, as parcelas diminuem progressivamente porque a amortização é constante, então os juros (calculados sobre saldo devedor) diminuem ao longo do tempo.",
+      "xp_value": 18
+    },
+    {
+      "id": "q094",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "planejamento_financeiro",
+      "difficulty": "medio",
+      "context": "Você está criando seu planejamento financeiro.",
+      "question": "Explique a importância de ter uma reserva de emergência antes de começar a investir em produtos de maior risco.",
+      "explanation": "Reserva de emergência protege seus investimentos: se surgir uma emergência, você usa a reserva ao invés de resgatar investimentos (possivelmente com perda). Sem reserva, você pode ser forçado a vender investimentos no momento errado, comprometendo seus objetivos de longo prazo.",
+      "xp_value": 20,
+      "keywords": ["reserva", "emergência", "proteção", "investimentos", "objetivos"]
+    },
+    {
+      "id": "q095",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "score_credito",
+      "difficulty": "avancado",
+      "context": "Você está aprendendo sobre fatores que afetam o score.",
+      "question": "Qual fator NÃO melhora seu score de crédito?",
+      "options": [
+        "Pagar contas em dia",
+        "Ter muitas consultas de crédito em pouco tempo",
+        "Manter uso do crédito abaixo de 30%",
+        "Ter histórico longo de bom pagamento"
+      ],
+      "correct_answer": 1,
+      "explanation": "Muitas consultas de crédito em pouco tempo pode indicar que você está buscando crédito desesperadamente, o que pode reduzir seu score. Os outros fatores melhoram o score.",
+      "xp_value": 20
+    },
+    {
+      "id": "q096",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "fundos_investimento",
+      "difficulty": "medio",
+      "context": "Você está avaliando fundos de investimento.",
+      "question": "O que é taxa de performance em fundos?",
+      "options": [
+        "Taxa fixa de administração",
+        "Taxa cobrada sobre o lucro do fundo quando supera um benchmark",
+        "Taxa de entrada",
+        "Um desconto"
+      ],
+      "correct_answer": 1,
+      "explanation": "Taxa de performance é cobrada apenas quando o fundo supera um índice de referência (benchmark). É uma forma de alinhar interesses do gestor com os investidores.",
+      "xp_value": 18
+    },
+    {
+      "id": "q097",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "renda_variavel",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre dividendos.",
+      "question": "Explique o que são dividendos em ações e como eles funcionam.",
+      "explanation": "Dividendos são parte do lucro que a empresa distribui aos acionistas. São pagos periodicamente (geralmente trimestral ou semestral) e são uma forma de retorno do investimento além da valorização da ação.",
+      "xp_value": 20,
+      "keywords": ["dividendos", "lucro", "acionistas", "retorno", "valorização"]
+    },
+    {
+      "id": "q098",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "analise_condicoes",
+      "difficulty": "medio",
+      "context": "Você está analisando um contrato de financiamento.",
+      "question": "O que é seguro de vida no financiamento?",
+      "options": [
+        "Obrigatório em todos os financiamentos",
+        "Seguro que quita a dívida em caso de morte do segurado",
+        "Um desconto",
+        "Opcional e não recomendado"
+      ],
+      "correct_answer": 1,
+      "explanation": "Seguro de vida quita a dívida em caso de morte do segurado, protegendo a família. Pode ser obrigatório em alguns casos, mas geralmente é opcional (embora recomendado).",
+      "xp_value": 18
+    },
+    {
+      "id": "q099",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "reserva_emergencia",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre onde guardar dinheiro.",
+      "question": "Por que a poupança pode não ser a melhor opção para reserva de emergência?",
+      "options": [
+        "Não é segura",
+        "Rendimento geralmente é menor que outras opções de baixo risco como CDB ou Tesouro Selic",
+        "Não tem liquidez",
+        "É ilegal"
+      ],
+      "correct_answer": 1,
+      "explanation": "Poupança tem liquidez, mas rendimento geralmente é menor que CDB ou Tesouro Selic, que também têm alta liquidez e são seguros. Para reserva de emergência, pode valer mais a pena essas alternativas.",
+      "xp_value": 18
+    },
+    {
+      "id": "q100",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "conceitos_basicos",
+      "difficulty": "avancado",
+      "context": "Você está aprendendo sobre educação financeira avançada.",
+      "question": "Explique a importância da educação financeira ao longo da vida e como ela impacta decisões importantes.",
+      "explanation": "Educação financeira permite tomar decisões informadas em momentos cruciais: compra de imóvel, aposentadoria, investimentos, gestão de dívidas. Impacta qualidade de vida, segurança financeira e realização de sonhos. É um aprendizado contínuo que se adapta às diferentes fases da vida.",
+      "xp_value": 25,
+      "keywords": ["educação", "decisões", "qualidade", "segurança", "aprendizado"]
+    },
+    {
+      "id": "q101",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "cartao_credito",
+      "difficulty": "basico",
+      "context": "Você está aprendendo sobre data de vencimento da fatura.",
+      "question": "O que acontece se você pagar a fatura do cartão após o vencimento?",
+      "options": [
+        "Nada acontece",
+        "Você paga juros, multa e pode ter o nome negativado",
+        "Ganha desconto",
+        "O cartão é cancelado automaticamente"
+      ],
+      "correct_answer": 1,
+      "explanation": "Atraso no pagamento gera juros altos, multa por atraso e pode resultar em negativação do nome, prejudicando seu score de crédito.",
+      "xp_value": 15
+    },
+    {
+      "id": "q102",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_fixa",
+      "difficulty": "medio",
+      "context": "Você está comparando investimentos.",
+      "question": "O que é liquidez diária?",
+      "options": [
+        "Resgate apenas uma vez por mês",
+        "Possibilidade de resgatar o investimento a qualquer dia útil",
+        "Resgate apenas no vencimento",
+        "Não pode resgatar nunca"
+      ],
+      "correct_answer": 1,
+      "explanation": "Liquidez diária permite resgatar o investimento a qualquer dia útil, geralmente com crédito na conta no mesmo dia ou D+1.",
+      "xp_value": 15
+    },
+    {
+      "id": "q103",
+      "type": "discursiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "medio",
+      "context": "Você está planejando financiar um imóvel.",
+      "question": "Explique o que é avaliação do imóvel e por que ela é necessária no financiamento.",
+      "explanation": "Avaliação determina o valor de mercado do imóvel através de análise técnica. É necessária porque: 1) O banco precisa garantir que o imóvel vale o valor financiado, 2) Define o valor máximo de financiamento (geralmente 80% do valor avaliado), 3) Protege todas as partes envolvidas.",
+      "xp_value": 20,
+      "keywords": ["avaliação", "valor", "mercado", "banco", "proteção"]
+    },
+    {
+      "id": "q104",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "orcamento_pessoal",
+      "difficulty": "basico",
+      "context": "Você está organizando suas finanças.",
+      "question": "Qual é a importância de ter uma planilha ou aplicativo de controle financeiro?",
+      "options": [
+        "Não é importante",
+        "Ajuda a visualizar gastos, identificar padrões e tomar decisões informadas",
+        "Apenas para impressionar",
+        "Apenas para empresas"
+      ],
+      "correct_answer": 1,
+      "explanation": "Ferramentas de controle financeiro ajudam a visualizar para onde vai o dinheiro, identificar gastos desnecessários, planejar melhor e tomar decisões financeiras mais informadas.",
+      "xp_value": 12
+    },
+    {
+      "id": "q105",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "emprestimos",
+      "difficulty": "medio",
+      "context": "Você está analisando opções de empréstimo.",
+      "question": "O que significa carência em um empréstimo?",
+      "options": [
+        "Período sem pagar nada",
+        "Período em que você paga apenas juros, sem amortizar o principal",
+        "Um desconto",
+        "A taxa de juros"
+      ],
+      "correct_answer": 1,
+      "explanation": "Carência é um período inicial onde você paga apenas os juros, sem amortizar o valor principal do empréstimo. Aumenta o custo total.",
+      "xp_value": 18
+    },
+    {
+      "id": "q106",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "introducao_investimentos",
+      "difficulty": "basico",
+      "context": "Você está começando a investir.",
+      "question": "Explique por que é importante entender seu perfil de investidor antes de escolher onde investir.",
+      "explanation": "Perfil (conservador, moderado, arrojado) define sua tolerância a risco. Conhecer seu perfil ajuda a escolher investimentos adequados, evitando estresse por volatilidade ou perdas que você não está preparado para lidar psicologicamente.",
+      "xp_value": 18,
+      "keywords": ["perfil", "risco", "tolerância", "adequado", "psicológico"]
+    },
+    {
+      "id": "q107",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_veicular",
+      "difficulty": "basico",
+      "context": "Você está considerando comprar um veículo.",
+      "question": "Qual é a principal desvantagem de comprar um veículo zero quilômetro?",
+      "options": [
+        "Não há desvantagens",
+        "Desvalorização imediata ao sair da concessionária (pode perder 20% no primeiro ano)",
+        "É mais barato",
+        "Não desvaloriza"
+      ],
+      "correct_answer": 1,
+      "explanation": "Veículos zero km desvalorizam muito no primeiro ano (podem perder 20% ou mais apenas ao sair da concessionária), tornando usado uma opção mais econômica.",
+      "xp_value": 15
+    },
+    {
+      "id": "q108",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "metas_financeiras",
+      "difficulty": "basico",
+      "context": "Você está estabelecendo metas.",
+      "question": "Por que é importante revisar e ajustar metas financeiras periodicamente?",
+      "options": [
+        "Não é importante",
+        "Porque a vida muda, renda muda, prioridades mudam - metas devem se adaptar",
+        "Metas devem ser fixas para sempre",
+        "Apenas quando tiver problemas"
+      ],
+      "correct_answer": 1,
+      "explanation": "Revisar metas permite ajustá-las conforme mudanças na vida, renda, prioridades e objetivos, mantendo-as realistas e alcançáveis.",
+      "xp_value": 12
+    },
+    {
+      "id": "q109",
+      "type": "discursiva",
+      "session": "credito",
+      "phase": "entendendo_credito",
+      "difficulty": "avancado",
+      "context": "Você está aprendendo sobre gestão de dívidas.",
+      "question": "Explique a estratégia da 'bola de neve' para pagar dívidas e quando ela é mais eficaz.",
+      "explanation": "Bola de neve: pague primeiro a menor dívida, depois use o dinheiro que pagava nela para a próxima menor, criando momentum psicológico. É mais eficaz quando você precisa de motivação e tem várias dívidas pequenas. Alternativa: método avalanche (pagar primeiro a maior taxa de juros).",
+      "xp_value": 22,
+      "keywords": ["bola", "neve", "menor", "momentum", "motivação"]
+    },
+    {
+      "id": "q110",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "renda_variavel",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre ações.",
+      "question": "O que significa 'buy and hold' em investimentos?",
+      "options": [
+        "Comprar e vender rapidamente",
+        "Estratégia de comprar e manter investimentos por longo prazo",
+        "Não comprar nunca",
+        "Comprar apenas uma vez"
+      ],
+      "correct_answer": 1,
+      "explanation": "Buy and hold é estratégia de comprar bons investimentos e mantê-los por longo prazo, aproveitando juros compostos e crescimento, ao invés de ficar comprando e vendendo.",
+      "xp_value": 18
+    },
+    {
+      "id": "q111",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "avancado",
+      "context": "Você está analisando financiamento imobiliário.",
+      "question": "O que é indexador no financiamento imobiliário?",
+      "options": [
+        "Um desconto",
+        "Índice que corrige o saldo devedor (ex: IPCA, CDI, TR)",
+        "A taxa de juros",
+        "O valor da entrada"
+      ],
+      "correct_answer": 1,
+      "explanation": "Indexador é o índice que corrige o saldo devedor ao longo do tempo. Pode ser IPCA (inflação), CDI, TR ou outros. Afeta o valor das parcelas e total a pagar.",
+      "xp_value": 20
+    },
+    {
+      "id": "q112",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "reserva_emergencia",
+      "difficulty": "avancado",
+      "context": "Você está otimizando sua reserva de emergência.",
+      "question": "Explique como calcular o valor ideal da sua reserva de emergência considerando sua situação pessoal.",
+      "explanation": "Cálculo: 1) Some todas despesas mensais essenciais, 2) Multiplique por meses de segurança (3-6 meses padrão, mais se trabalho instável), 3) Considere: estabilidade de renda, dependentes, seguros que você tem. Exemplo: R$ 3.000/mês x 6 meses = R$ 18.000.",
+      "xp_value": 22,
+      "keywords": ["despesas", "meses", "estabilidade", "dependentes", "segurança"]
+    },
+    {
+      "id": "q113",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "score_credito",
+      "difficulty": "basico",
+      "context": "Você quer entender seu score de crédito.",
+      "question": "Onde você pode consultar seu score de crédito gratuitamente?",
+      "options": [
+        "Apenas pagando",
+        "Em sites como Serasa, Boa Vista, Receita Federal e alguns bancos",
+        "Não é possível consultar",
+        "Apenas em agências bancárias"
+      ],
+      "correct_answer": 1,
+      "explanation": "Você pode consultar seu score gratuitamente em sites como Serasa, Boa Vista, Receita Federal e alguns bancos oferecem essa consulta gratuita também.",
+      "xp_value": 12
+    },
+    {
+      "id": "q114",
+      "type": "objetiva",
+      "session": "investimentos",
+      "phase": "fundos_investimento",
+      "difficulty": "basico",
+      "context": "Você está conhecendo fundos.",
+      "question": "O que é cota em um fundo de investimento?",
+      "options": [
+        "Um desconto",
+        "Pequena parte do patrimônio do fundo que você possui",
+        "A taxa de administração",
+        "O valor total do fundo"
+      ],
+      "correct_answer": 1,
+      "explanation": "Cota é uma pequena parte do patrimônio do fundo. Quando você investe, compra cotas. O valor da cota varia conforme o desempenho do fundo.",
+      "xp_value": 15
+    },
+    {
+      "id": "q115",
+      "type": "discursiva",
+      "session": "financiamento",
+      "phase": "analise_condicoes",
+      "difficulty": "medio",
+      "context": "Você está analisando condições de financiamento.",
+      "question": "Explique o que são seguros obrigatórios em financiamentos e por que são cobrados.",
+      "explanation": "Seguros obrigatórios (ex: seguro de vida, seguro do imóvel) protegem o banco e você em caso de sinistros. São cobrados porque garantem que a dívida será quitada mesmo em situações adversas, protegendo todas as partes.",
+      "xp_value": 20,
+      "keywords": ["seguros", "obrigatórios", "proteção", "sinistros", "garantia"]
+    },
+    {
+      "id": "q116",
+      "type": "objetiva",
+      "session": "introducao",
+      "phase": "planejamento_financeiro",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre aposentadoria.",
+      "question": "Por que é importante começar a planejar a aposentadoria cedo?",
+      "options": [
+        "Não é importante",
+        "Porque juros compostos funcionam melhor com mais tempo, permitindo acumular mais com menos esforço",
+        "Aposentadoria não precisa de planejamento",
+        "É melhor começar perto da aposentadoria"
+      ],
+      "correct_answer": 1,
+      "explanation": "Começar cedo permite que juros compostos trabalhem por mais tempo, fazendo você acumular muito mais com menos esforço mensal. Quanto mais tempo, menos precisa economizar por mês.",
+      "xp_value": 18
+    },
+    {
+      "id": "q117",
+      "type": "objetiva",
+      "session": "credito",
+      "phase": "cartao_credito",
+      "difficulty": "medio",
+      "context": "Você está aprendendo sobre cashback.",
+      "question": "O que é cashback?",
+      "options": [
+        "Um tipo de empréstimo",
+        "Sistema que devolve parte do valor gasto em compras",
+        "Uma taxa",
+        "Um desconto imediato"
+      ],
+      "correct_answer": 1,
+      "explanation": "Cashback é um sistema que devolve uma porcentagem do valor gasto em compras, geralmente como crédito na conta ou no cartão. É uma forma de recompensa.",
+      "xp_value": 15
+    },
+    {
+      "id": "q118",
+      "type": "discursiva",
+      "session": "investimentos",
+      "phase": "estrategias_avancadas",
+      "difficulty": "avancado",
+      "context": "Você está montando uma estratégia de investimento.",
+      "question": "Explique o conceito de rebalanceamento de carteira e por que é importante.",
+      "explanation": "Rebalanceamento é ajustar a carteira para manter a alocação desejada. Ex: se ações cresceram muito, vender parte e comprar mais renda fixa. É importante para manter o perfil de risco desejado e aproveitar oportunidades.",
+      "xp_value": 22,
+      "keywords": ["rebalanceamento", "carteira", "alocação", "risco", "oportunidades"]
+    },
+    {
+      "id": "q119",
+      "type": "objetiva",
+      "session": "financiamento",
+      "phase": "financiamento_imobiliario",
+      "difficulty": "basico",
+      "context": "Você está pesquisando sobre financiamento.",
+      "question": "O que é prazo de financiamento?",
+      "options": [
+        "O tempo que você tem para dar a entrada",
+        "Período total para quitar o financiamento (ex: 30 anos)",
+        "O tempo de análise",
+        "Um desconto"
+      ],
+      "correct_answer": 1,
+      "explanation": "Prazo é o período total para quitar o financiamento. Prazos maiores = parcelas menores, mas mais juros no total. Prazos menores = parcelas maiores, mas menos juros.",
+      "xp_value": 12
+    },
+    {
+      "id": "q120",
+      "type": "discursiva",
+      "session": "introducao",
+      "phase": "conceitos_basicos",
+      "difficulty": "medio",
+      "context": "Você está consolidando seus conhecimentos sobre educação financeira.",
+      "question": "Explique como os conceitos de orçamento, reserva de emergência, investimentos e planejamento se relacionam em uma estratégia financeira completa.",
+      "explanation": "Orçamento controla gastos e identifica capacidade de poupar. Reserva de emergência protege contra imprevistos. Investimentos fazem dinheiro crescer. Planejamento conecta tudo: define objetivos, usa orçamento para economizar, constrói reserva primeiro, depois investe conforme objetivos e perfil. Todos trabalham juntos para segurança e crescimento financeiro.",
+      "xp_value": 25,
+      "keywords": ["orçamento", "reserva", "investimentos", "planejamento", "estratégia"]
     }
   ]
 }
