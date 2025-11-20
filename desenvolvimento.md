@@ -9,139 +9,99 @@
 
 ---
 
-## CLASSES E ESTRUTURAS (Go com GORM)
+## CLASSES E ESTRUTURAS (Go)
 
 ### 1. Usuário (User)
 ```go
 type User struct {
-    ID          uint      `gorm:"primaryKey;autoIncrement" json:"id"`
-    Username    string    `gorm:"type:varchar(100);uniqueIndex;not null" json:"username"`
-    Email       string    `gorm:"type:varchar(255);uniqueIndex;not null" json:"email"`
-    Password    string    `gorm:"type:varchar(255);not null" json:"-"` // não serializa em JSON
-    XP          int       `gorm:"type:int;default:0" json:"xp"`
-    Level       int       `gorm:"type:int;default:1" json:"level"`
-    CreatedAt   time.Time `gorm:"autoCreateTime" json:"created_at"`
-    UpdatedAt   time.Time `gorm:"autoUpdateTime" json:"updated_at"`
-    DeletedAt   gorm.DeletedAt `gorm:"index" json:"deleted_at,omitempty"`
-    Progress    UserProgress `gorm:"foreignKey:UserID" json:"progress"`
+    ID          string    `json:"id"`
+    Username    string    `json:"username"`
+    Email       string    `json:"email"`
+    XP          int       `json:"xp"`
+    Level       int       `json:"level"`
+    CreatedAt   time.Time `json:"created_at"`
+    UpdatedAt   time.Time `json:"updated_at"`
+    Progress    UserProgress `json:"progress"`
 }
 ```
 
 ### 2. Progresso do Usuário (UserProgress)
 ```go
 type UserProgress struct {
-    ID                uint      `gorm:"primaryKey;autoIncrement" json:"id"`
-    UserID            uint      `gorm:"type:int;not null;index" json:"user_id"`
-    CompletedLevels   string    `gorm:"type:text" json:"completed_levels"` // JSON array stored as text
-    CurrentLevel      string    `gorm:"type:varchar(50)" json:"current_level"`
-    CompletedMissions string    `gorm:"type:text" json:"completed_missions"` // JSON array stored as text
-    Achievements      string    `gorm:"type:text" json:"achievements"` // JSON array stored as text
-    LastActivity      time.Time `gorm:"type:timestamp" json:"last_activity"`
-    CreatedAt         time.Time `gorm:"autoCreateTime" json:"created_at"`
-    UpdatedAt         time.Time `gorm:"autoUpdateTime" json:"updated_at"`
-    User              User      `gorm:"foreignKey:UserID" json:"-"`
+    UserID              string            `json:"user_id"`
+    CompletedLevels     []string          `json:"completed_levels"`
+    CurrentLevel        string            `json:"current_level"`
+    CompletedMissions   []string          `json:"completed_missions"`
+    Achievements        []Achievement     `json:"achievements"`
+    LastActivity        time.Time         `json:"last_activity"`
 }
 ```
 
 ### 3. Pergunta (Question)
 ```go
 type Question struct {
-    ID            uint           `gorm:"primaryKey;autoIncrement" json:"id"`
-    QuestionID    string         `gorm:"type:varchar(50);uniqueIndex;not null" json:"question_id"` // ID original do JSON (q001, q002, etc)
-    Type          string         `gorm:"type:varchar(20);not null" json:"type"` // objetiva, discursiva
-    Session       string         `gorm:"type:varchar(50);not null;index" json:"session"` // introducao, credito, investimentos, financiamento
-    Phase         string         `gorm:"type:varchar(100);not null;index" json:"phase"` // conceitos_basicos, orcamento_pessoal, etc
-    Difficulty    string         `gorm:"type:varchar(20);not null;index" json:"difficulty"` // iniciante, basico, medio, avancado
-    Context       string         `gorm:"type:text" json:"context"`
-    Question      string         `gorm:"type:text;not null" json:"question"`
-    Options        string         `gorm:"type:text" json:"options"` // JSON array stored as text (para perguntas objetivas)
-    CorrectAnswer  *int           `gorm:"type:int" json:"correct_answer"` // nullable para perguntas discursivas
-    Explanation    string         `gorm:"type:text;not null" json:"explanation"`
-    XPValue        int            `gorm:"type:int;not null;default:10" json:"xp_value"`
-    Keywords       string         `gorm:"type:text" json:"keywords"` // JSON array stored as text (para perguntas discursivas)
-    CreatedAt      time.Time      `gorm:"autoCreateTime" json:"created_at"`
-    UpdatedAt      time.Time      `gorm:"autoUpdateTime" json:"updated_at"`
-    DeletedAt      gorm.DeletedAt `gorm:"index" json:"deleted_at,omitempty"`
+    ID          string    `json:"id"`
+    Difficulty  string    `json:"difficulty"`  // iniciante, basico, medio, avancado
+    Subject     string    `json:"subject"`     // introducao, credito, investimentos, financiamento
+    Context     string    `json:"context"`
+    Question    string    `json:"question"`
+    Options     []string  `json:"options"`
+    CorrectAnswer int     `json:"correct_answer"`
+    Explanation string    `json:"explanation"`
+    XPValue     int       `json:"xp_value"`
+    CreatedAt   time.Time `json:"created_at"`
 }
 ```
 
 ### 4. Resposta do Usuário (UserAnswer)
 ```go
 type UserAnswer struct {
-    ID          uint      `gorm:"primaryKey;autoIncrement" json:"id"`
-    UserID      uint      `gorm:"type:int;not null;index" json:"user_id"`
-    QuestionID  uint      `gorm:"type:int;not null;index" json:"question_id"`
-    Answer      int       `gorm:"type:int" json:"answer"`
-    AnswerText  string    `gorm:"type:text" json:"answer_text"` // para perguntas discursivas
-    IsCorrect   bool      `gorm:"type:boolean;default:false" json:"is_correct"`
-    TimeSpent   int       `gorm:"type:int;default:0" json:"time_spent"` // em segundos
-    AnsweredAt  time.Time `gorm:"type:timestamp;autoCreateTime" json:"answered_at"`
-    CreatedAt   time.Time `gorm:"autoCreateTime" json:"created_at"`
-    User        User      `gorm:"foreignKey:UserID" json:"-"`
-    Question    Question  `gorm:"foreignKey:QuestionID" json:"-"`
+    ID          string    `json:"id"`
+    UserID      string    `json:"user_id"`
+    QuestionID  string    `json:"question_id"`
+    Answer      int       `json:"answer"`
+    IsCorrect   bool      `json:"is_correct"`
+    TimeSpent   int       `json:"time_spent"`  // em segundos
+    AnsweredAt  time.Time `json:"answered_at"`
 }
 ```
 
 ### 5. Missão (Mission)
 ```go
 type Mission struct {
-    ID            uint           `gorm:"primaryKey;autoIncrement" json:"id"`
-    MissionID     string         `gorm:"type:varchar(50);uniqueIndex;not null" json:"mission_id"` // ID original do JSON
-    Title         string         `gorm:"type:varchar(255);not null" json:"title"`
-    Description   string         `gorm:"type:text" json:"description"`
-    Type          string         `gorm:"type:varchar(20);not null;index" json:"type"` // daily, weekly, achievement
-    XPReward      int            `gorm:"type:int;not null;default:0" json:"xp_reward"`
-    Requirements  string         `gorm:"type:text" json:"requirements"` // JSON object stored as text
-    ExpiresAt     *time.Time     `gorm:"type:timestamp" json:"expires_at,omitempty"`
-    CreatedAt     time.Time      `gorm:"autoCreateTime" json:"created_at"`
-    UpdatedAt     time.Time      `gorm:"autoUpdateTime" json:"updated_at"`
-    DeletedAt     gorm.DeletedAt `gorm:"index" json:"deleted_at,omitempty"`
+    ID          string    `json:"id"`
+    Title       string    `json:"title"`
+    Description string    `json:"description"`
+    Type        string    `json:"type"`        // daily, weekly, achievement
+    XP Reward   int       `json:"xp_reward"`
+    Requirements map[string]interface{} `json:"requirements"`
+    ExpiresAt   *time.Time `json:"expires_at,omitempty"`
 }
 ```
 
 ### 6. Nível (Level)
 ```go
 type Level struct {
-    ID            uint           `gorm:"primaryKey;autoIncrement" json:"id"`
-    LevelID       string         `gorm:"type:varchar(50);uniqueIndex;not null" json:"level_id"` // ID original do JSON
-    Number        int            `gorm:"type:int;not null;uniqueIndex" json:"number"`
-    Name          string         `gorm:"type:varchar(255);not null" json:"name"`
-    Difficulty    string         `gorm:"type:varchar(20);not null;index" json:"difficulty"`
-    Subject       string         `gorm:"type:varchar(50);not null;index" json:"subject"`
-    QuestionIDs   string         `gorm:"type:text" json:"question_ids"` // JSON array stored as text
-    RequiredXP    int            `gorm:"type:int;not null;default:0" json:"required_xp"`
-    Unlocked      bool           `gorm:"type:boolean;default:false" json:"unlocked"`
-    CreatedAt     time.Time      `gorm:"autoCreateTime" json:"created_at"`
-    UpdatedAt     time.Time      `gorm:"autoUpdateTime" json:"updated_at"`
-    DeletedAt     gorm.DeletedAt `gorm:"index" json:"deleted_at,omitempty"`
+    ID          string    `json:"id"`
+    Number      int       `json:"number"`
+    Name        string    `json:"name"`
+    Difficulty  string    `json:"difficulty"`
+    Subject     string    `json:"subject"`
+    Questions   []string  `json:"question_ids"`
+    RequiredXP  int       `json:"required_xp"`
+    Unlocked    bool      `json:"unlocked"`
 }
 ```
 
 ### 7. Conquista (Achievement)
 ```go
 type Achievement struct {
-    ID            uint           `gorm:"primaryKey;autoIncrement" json:"id"`
-    AchievementID string         `gorm:"type:varchar(50);uniqueIndex;not null" json:"achievement_id"` // ID original do JSON
-    Title         string         `gorm:"type:varchar(255);not null" json:"title"`
-    Description   string         `gorm:"type:text" json:"description"`
-    Icon          string         `gorm:"type:varchar(10)" json:"icon"` // emoji
-    XPReward      int            `gorm:"type:int;not null;default:0" json:"xp_reward"`
-    CreatedAt     time.Time      `gorm:"autoCreateTime" json:"created_at"`
-    UpdatedAt     time.Time      `gorm:"autoUpdateTime" json:"updated_at"`
-    DeletedAt     gorm.DeletedAt `gorm:"index" json:"deleted_at,omitempty"`
-}
-```
-
-### 8. Metadata (Metadata)
-```go
-type Metadata struct {
-    ID            uint      `gorm:"primaryKey;autoIncrement" json:"id"`
-    Version       string    `gorm:"type:varchar(20);not null" json:"version"`
-    LastUpdated   time.Time `gorm:"type:date;not null" json:"last_updated"`
-    TotalQuestions int      `gorm:"type:int;not null" json:"total_questions"`
-    Subjects      string    `gorm:"type:text" json:"subjects"` // JSON array stored as text
-    CreatedAt     time.Time `gorm:"autoCreateTime" json:"created_at"`
-    UpdatedAt     time.Time `gorm:"autoUpdateTime" json:"updated_at"`
+    ID          string    `json:"id"`
+    Title       string    `json:"title"`
+    Description string    `json:"description"`
+    Icon        string    `json:"icon"`
+    XP Reward   int       `json:"xp_reward"`
+    UnlockedAt  *time.Time `json:"unlocked_at,omitempty"`
 }
 ```
 
