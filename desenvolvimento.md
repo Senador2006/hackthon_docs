@@ -9,100 +9,119 @@
 
 ---
 
-## CLASSES E ESTRUTURAS (Go)
+## CLASSES E ESTRUTURAS (Python)
 
 ### 1. Usuário (User)
-```go
-type User struct {
-    ID          string    `json:"id"`
-    Username    string    `json:"username"`
-    Email       string    `json:"email"`
-    XP          int       `json:"xp"`
-    Level       int       `json:"level"`
-    CreatedAt   time.Time `json:"created_at"`
-    UpdatedAt   time.Time `json:"updated_at"`
-    Progress    UserProgress `json:"progress"`
-}
+```python
+from datetime import datetime
+from typing import Optional
+from pydantic import BaseModel
+
+class User(BaseModel):
+    id: str
+    username: str
+    email: str
+    xp: int
+    level: int
+    created_at: datetime
+    updated_at: datetime
+    progress: Optional['UserProgress'] = None
 ```
 
 ### 2. Progresso do Usuário (UserProgress)
-```go
-type UserProgress struct {
-    UserID              string            `json:"user_id"`
-    CompletedLevels     []string          `json:"completed_levels"`
-    CurrentLevel        string            `json:"current_level"`
-    CompletedMissions   []string          `json:"completed_missions"`
-    Achievements        []Achievement     `json:"achievements"`
-    LastActivity        time.Time         `json:"last_activity"`
-}
+```python
+from datetime import datetime
+from typing import List, Optional
+from pydantic import BaseModel
+
+class UserProgress(BaseModel):
+    user_id: str
+    completed_levels: List[str] = []
+    current_level: Optional[str] = None
+    completed_missions: List[str] = []
+    achievements: List['Achievement'] = []
+    last_activity: datetime
 ```
 
 ### 3. Pergunta (Question)
-```go
-type Question struct {
-    ID          string    `json:"id"`
-    Difficulty  string    `json:"difficulty"`  // iniciante, basico, medio, avancado
-    Subject     string    `json:"subject"`     // introducao, credito, investimentos, financiamento
-    Context     string    `json:"context"`
-    Question    string    `json:"question"`
-    Options     []string  `json:"options"`
-    CorrectAnswer int     `json:"correct_answer"`
-    Explanation string    `json:"explanation"`
-    XPValue     int       `json:"xp_value"`
-    CreatedAt   time.Time `json:"created_at"`
-}
+```python
+from datetime import datetime
+from typing import List
+from pydantic import BaseModel
+
+class Question(BaseModel):
+    id: str
+    difficulty: str  # iniciante, basico, medio, avancado
+    subject: str     # introducao, credito, investimentos, financiamento
+    context: str
+    question: str
+    options: List[str]
+    correct_answer: int
+    explanation: str
+    xp_value: int
+    created_at: datetime
 ```
 
 ### 4. Resposta do Usuário (UserAnswer)
-```go
-type UserAnswer struct {
-    ID          string    `json:"id"`
-    UserID      string    `json:"user_id"`
-    QuestionID  string    `json:"question_id"`
-    Answer      int       `json:"answer"`
-    IsCorrect   bool      `json:"is_correct"`
-    TimeSpent   int       `json:"time_spent"`  // em segundos
-    AnsweredAt  time.Time `json:"answered_at"`
-}
+```python
+from datetime import datetime
+from pydantic import BaseModel
+
+class UserAnswer(BaseModel):
+    id: str
+    user_id: str
+    question_id: str
+    answer: int
+    is_correct: bool
+    time_spent: int  # em segundos
+    answered_at: datetime
 ```
 
 ### 5. Missão (Mission)
-```go
-type Mission struct {
-    ID          string    `json:"id"`
-    Title       string    `json:"title"`
-    Description string    `json:"description"`
-    Type        string    `json:"type"`        // daily, weekly, achievement
-    XP Reward   int       `json:"xp_reward"`
-    Requirements map[string]interface{} `json:"requirements"`
-    ExpiresAt   *time.Time `json:"expires_at,omitempty"`
-}
+```python
+from datetime import datetime
+from typing import Dict, Optional, Any
+from pydantic import BaseModel
+
+class Mission(BaseModel):
+    id: str
+    title: str
+    description: str
+    type: str  # daily, weekly, achievement
+    xp_reward: int
+    requirements: Dict[str, Any]
+    expires_at: Optional[datetime] = None
 ```
 
 ### 6. Nível (Level)
-```go
-type Level struct {
-    ID          string    `json:"id"`
-    Number      int       `json:"number"`
-    Name        string    `json:"name"`
-    Difficulty  string    `json:"difficulty"`
-    Subject     string    `json:"subject"`
-    Questions   []string  `json:"question_ids"`
-    RequiredXP  int       `json:"required_xp"`
-    Unlocked    bool      `json:"unlocked"`
-}
+```python
+from typing import List
+from pydantic import BaseModel
+
+class Level(BaseModel):
+    id: str
+    number: int
+    name: str
+    difficulty: str
+    subject: str
+    question_ids: List[str]
+    required_xp: int
+    unlocked: bool
 ```
 
 ### 7. Conquista (Achievement)
-```go
-type Achievement struct {
-    ID          string    `json:"id"`
-    Title       string    `json:"title"`
-    Description string    `json:"description"`
-    Icon        string    `json:"icon"`
-    XP Reward   int       `json:"xp_reward"`
-    UnlockedAt  *time.Time `json:"unlocked_at,omitempty"`
-}
+```python
+from datetime import datetime
+from typing import Optional
+from pydantic import BaseModel
+
+class Achievement(BaseModel):
+    id: str
+    title: str
+    description: str
+    icon: str
+    xp_reward: int
+    unlocked_at: Optional[datetime] = None
 ```
 
 ---
@@ -133,14 +152,14 @@ type Achievement struct {
 
 ### Fase 1: Setup e Infraestrutura-
 - [ ] Configuração do repositório GitHub
-- [ ] Setup do projeto Go
+- [ ] Setup do projeto Python
 - [ ] Configuração do PostgreSQL
 - [ ] Estrutura de pastas do projeto
 - [ ] Configuração de variáveis de ambiente
 
 ### Fase 2: Modelos e Banco de Dados-
 - [ ] Criação das tabelas no PostgreSQL
-- [ ] Implementação das structs Go
+- [ ] Implementação dos modelos Python (Pydantic/SQLAlchemy)
 - [ ] Migrations do banco de dados
 - [ ] Seed de dados iniciais (perguntas)
 
@@ -377,13 +396,13 @@ type Achievement struct {
                             |
         +-------------------+-------------------+
         |                   |                   |
-    FRONTEND            BACKEND (Go)        DATABASE
+    FRONTEND         BACKEND (Python)      DATABASE
         |                   |                   |
-    React/Flutter      API REST            PostgreSQL
+    React/Flutter      FastAPI            PostgreSQL
         |                   |                   |
         |           +-------+-------+           |
         |           |       |       |           |
-        |      Handlers  Models  Services      |
+        |      Routes  Models  Services         |
         |           |       |       |           |
         |           +-------+-------+           |
         |                                       |
@@ -400,7 +419,7 @@ type Achievement struct {
     Frontend (React/Flutter)
         |
         v
-    API REST (Go)
+    API REST (FastAPI/Python)
         |
         +---> Autenticação
         |
@@ -493,9 +512,9 @@ type Achievement struct {
         |                   |                   |
     FRONTEND            BACKEND            INFRAESTRUTURA
         |                   |                   |
-    React/Flutter       Go (Golang)         PostgreSQL
+    React/Flutter       Python (FastAPI)   PostgreSQL
         |                   |                   |
-    HTML/CSS/JS        Gin/Echo            Docker
+    HTML/CSS/JS        Pydantic/SQLAlchemy Docker
         |                   |                   |
     Figma (Design)     JWT Auth            Render (Deploy)
         |                   |                   |
@@ -520,7 +539,7 @@ Esta seção contém diagramas detalhados de como as diferentes partes do sistem
 sequenceDiagram
     participant U as Usuário
     participant F as Frontend
-    participant A as API Handler
+    participant A as API Handler (FastAPI)
     participant Auth as AuthService
     participant DB as PostgreSQL
 
@@ -576,7 +595,7 @@ sequenceDiagram
 sequenceDiagram
     participant U as Usuário
     participant F as Frontend
-    participant A as API Handler
+    participant A as API Handler (FastAPI)
     participant QS as QuestionService
     participant PS as ProgressService
     participant DB as PostgreSQL
@@ -674,7 +693,7 @@ sequenceDiagram
 sequenceDiagram
     participant U as Usuário
     participant F as Frontend
-    participant A as API Handler
+    participant A as API Handler (FastAPI)
     participant PS as ProgressService
     participant MS as MissionService
     participant AS as AchievementService
@@ -773,7 +792,7 @@ sequenceDiagram
 sequenceDiagram
     participant U as Usuário
     participant F as Frontend
-    participant A as API Handler
+    participant A as API Handler (FastAPI)
     participant MS as MissionService
     participant PS as ProgressService
     participant DB as PostgreSQL
@@ -884,7 +903,7 @@ graph TB
     end
     
     subgraph "API Layer"
-        Router[Router/HTTP Handler]
+        Router[FastAPI Router/HTTP Handler]
         Middleware[Middleware Auth/Validation]
     end
     
@@ -948,7 +967,7 @@ graph TB
 ┌─────────────────────────────────────────────────────────────────┐
 │                         API LAYER                               │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │                    Router/Handler                        │   │
+│  │              FastAPI Router/HTTP Handler                  │   │
 │  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │   │
 │  │  │   /auth      │  │  /questions  │  │   /progress  │  │   │
 │  │  │   /users     │  │  /levels     │  │   /missions   │  │   │

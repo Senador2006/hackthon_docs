@@ -3,7 +3,7 @@
 > Jogo educacional de perguntas e respostas sobre educação financeira, inspirado no Duolingo, com sistema de gamificação, níveis de dificuldade progressivos e aprendizado interativo.
 
 [![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](https://github.com)
-[![Tecnologia](https://img.shields.io/badge/backend-Go-blue)](https://golang.org/)
+[![Tecnologia](https://img.shields.io/badge/backend-Python-blue)](https://www.python.org/)
 [![Tecnologia](https://img.shields.io/badge/frontend-HTML%2FCSS%2FJS-orange)](https://developer.mozilla.org/)
 [![Banco de Dados](https://img.shields.io/badge/database-PostgreSQL-blue)](https://www.postgresql.org/)
 
@@ -109,8 +109,7 @@ O **HACKTHON** é um jogo educacional que combina elementos de gamificação (XP
 - Figma (design)
 
 #### Backend
-- **Go (Golang)** ✅
-- **Python** ✅ (para ML/AI)
+- **Python** ✅ (FastAPI)
 - Node.js (alternativa futura)
 
 #### Machine Learning
@@ -154,14 +153,14 @@ Hackthon/
 
 ### Fase 1: Setup e Infraestrutura ✅
 - [x] Configuração do repositório GitHub
-- [x] Setup do projeto Go
+- [x] Setup do projeto Python
 - [x] Configuração do PostgreSQL
 - [x] Estrutura de pastas do projeto
 - [x] Configuração de variáveis de ambiente
 
 ### Fase 2: Modelos e Banco de Dados 🔄
 - [ ] Criação das tabelas no PostgreSQL
-- [ ] Implementação das structs Go
+- [ ] Implementação dos modelos Python (Pydantic/SQLAlchemy)
 - [ ] Migrations do banco de dados
 - [ ] Seed de dados iniciais (perguntas)
 
